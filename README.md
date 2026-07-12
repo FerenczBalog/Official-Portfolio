@@ -26,5 +26,5 @@
 					CONTACT:
 					
 		           mail: balogferencz.artist@gmailcom
-			website: https://balogferencz.wordpress.com
-		      git pages: ferenczbalog.github.io (this portfolio)
+				   website: ferenczbalog.github.io
+		           git pages: ferenczbalog.github.io (this portfolio)
