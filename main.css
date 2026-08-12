@@ -191,6 +191,24 @@ body {
     transform: translateX(5px);
 }
 
+/* CONTAINER & CARDS ADJUSTMENT FOR 2 CARDS */
+.expertise-container.two-cards {
+    max-width: 720px; /* Szűkebb keret, hogy a 2 kártya ne nyúljon el túlságosan */
+}
+
+.expertise-container.two-cards .expertise-card {
+    max-width: 340px;
+}
+
+@media (max-width: 768px) {
+    .expertise-container.two-cards {
+        max-width: 400px;
+    }
+    .expertise-container.two-cards .expertise-card {
+        max-width: 100%;
+    }
+}
+
 /* FOOTER */
 .landing-footer {
     text-align: center;
