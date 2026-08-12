@@ -3,31 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferencz Balog - director of photography</title>
+    <title>Balog Ferencz — Sound Engineer</title>
 
-    <link rel="stylesheet" href="/style.css">
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="Audio Engineering, Post-Production, Mixing & Sound Design portfolio of Ferencz Balog. Based in Cluj-Napoca.">
+    <meta property="og:title" content="Balog Ferencz — Sound Engineer">
+    <meta property="og:description" content="Professional Audio Mixing, Mastering, Film Sound Design & Post-Production.">
+    <meta property="og:image" content="/img/Logo-general.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="/img/Logo-general.png">
 
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/expertise/sound_engineer/sound-style.css">
 </head>
 <body>
 
-    <section id="Home">
+    <div class="split-container">
 
-            <a href="/index.html"><img src="/img/Logo-soundEngineer.png" alt="Ferencz Balog" id="logo-pic"></a>
+        <!-- FIX BAL OLDAL (SIDEBAR) -->
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <a href="/index.html">
+                    <img src="/img/Logo-general.png" alt="Ferencz Balog Logo" class="sidebar-logo">
+                </a>
+                
+                <div class="profile-info">
+                    <h1>Balog Ferencz</h1>
+                    <p class="subtitle">Sound Engineer & Designer</p>
+                </div>
 
-            <nav>
-                <a href="#">Sound Design</a>
-                <a href="#">Boom Operator</a>
-                <a href="#">Live Sound</a>  
-                <a href="#">Contact</a>     
-            </nav>
+                <nav class="sidebar-nav">
+                    <a href="#Reel"><i class="fa-solid fa-sliders"></i> Audio Reel</a>
+                    <a href="#FilmSound"><i class="fa-solid fa-headphones"></i> Film Sound Design</a>
+                    <a href="#Mixing"><i class="fa-solid fa-compact-disc"></i> Mixing & Mastering</a>
+                    <a href="#Studio"><i class="fa-solid fa-microphone-lines"></i> Studio Setup</a>
+                    <a href="#Contact"><i class="fa-solid fa-paper-plane"></i> Contact & Quote</a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="socials">
+                        <a href="https://soundcloud.com" target="_blank" aria-label="SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:info@ferenczbalog.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <p>© 2026 Balog Ferencz</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- GÖRGETHETŐ JOBB OLDAL (CONTENT) -->
+        <main class="main-content">
+
+            <!-- 01. AUDIO REEL HIGHLIGHT -->
+            <section id="Reel" class="content-block">
+                <div class="block-title">
+                    <h2>01. Audio Showreel</h2>
+                </div>
+                <div class="audio-card main-reel">
+                    <div class="audio-card-header">
+                        <div>
+                            <h3>Selected Audio Production Reel</h3>
+                            <p class="project-subtitle">Mix of Film Post-Production, Foley & Acoustic Mastering</p>
+                        </div>
+                        <span class="badge sound-badge">Mastered 24-bit/96kHz</span>
+                    </div>
+                    <div class="custom-audio-player">
+                        <button class="play-audio-btn" onclick="toggleAudio('mainAudio', this)">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <div class="audio-waveform-container">
+                            <div class="waveform-bars">
+                                <!-- Díszítő hullámforma sávok -->
+                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <audio id="mainAudio" src="/expertise/sound_engineer/audio/showreel.mp3"></audio>
+                    </div>
+                    <div class="tech-specs">
+                        <span><i class="fa-solid fa-wave-square"></i> Stereo & Surround 5.1</span>
+                        <span><i class="fa-solid fa-sliders"></i> EBU R128 Loudness Standard</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02. FILM SOUND DESIGN -->
+            <section id="FilmSound" class="content-block">
+                <div class="block-title">
+                    <h2>02. Film Post-Production & Foley</h2>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-card-header">
+                        <div>
+                            <h3>A Verem — Film Audio Post</h3>
+                            <p class="project-subtitle">Dialogue Cleanup, Ambience Creation & Custom Foley</p>
+                        </div>
+                        <span class="badge sound-badge">Film Audio</span>
+                    </div>
+                    <p class="project-desc">Complete audio restoration, ADR recording, and Foley sound design for a noir short film project.</p>
+                    <div class="tech-specs">
+                        <span>DAW: Pro Tools / Reaper</span>
+                        <span>MONITORS: ESI NEAR08 Studio Monitors</span>
+                        <span>FORMAT: Broadcast WAV</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03. MIXING & MASTERING -->
+            <section id="Mixing" class="content-block">
+                <div class="block-title">
+                    <h2>03. Music Mixing & Studio Mastering</h2>
+                </div>
+                <p class="section-intro">Precision acoustic alignment, analog/digital hybrid processing, and streaming-ready audio mastering.</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fa-solid fa-diagram-project service-icon"></i>
+                        <h4>Stem Mixing</h4>
+                        <p>Multi-track balancing, EQ carving, dynamic control, and spatial depth enhancement.</p>
+                        <span class="tech-tag">Hybrid Analog/Digital</span>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-chart-simple service-icon"></i>
+                        <h4>Audio Mastering</h4>
+                        <p>Final polishing, loudness normalization for Spotify/Apple Music, and phase alignment.</p>
+                        <span class="tech-tag">LUFS Normalized</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04. STUDIO SETUP -->
+            <section id="Studio" class="content-block">
+                <div class="block-title">
+                    <h2>04. Studio Environment & Gear</h2>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-box">
+                        <h4>Monitoring</h4>
+                        <p>ESI NEAR08 Active Nearfield Monitors, Calibrated Acoustic Room Treatment.</p>
+                    </div>
+                    <div class="tech-box">
+                        <h4>Software & Processing</h4>
+                        <p>iZotope RX Advanced, FabFilter Pro Bundle, Waves Audio, Universal Audio DSP.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05. CONTACT -->
+            <section id="Contact" class="content-block contact-block">
+                <div class="block-title">
+                    <h2>05. Contact & Audio Booking</h2>
+                </div>
+                <p>Available for film audio post-production, sound design, and custom stem mixing.</p>
+                <div class="quote-notice sound-notice">
+                    <p><i class="fa-solid fa-circle-info"></i> For mixing or film audio inquiries, please provide stem count, sample rate, and target reference tracks.</p>
+                </div>
+                <div class="contact-actions">
+                    <a href="mailto:info@ferenczbalog.com" class="direct-email"><i class="fa-solid fa-envelope"></i> info@ferenczbalog.com</a>
+                    <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Cluj-Napoca, Romania</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        function toggleAudio(audioId, btn) {
+            const audio = document.getElementById(audioId);
+            const icon = btn.querySelector('i');
             
-    </section>
-
-    <Footer id="footer-box">
-            <p>Copyright © 2026 Balog Ferencz. All rights reserved.</p>
-    </Footer>
-    
+            if (audio.paused) {
+                audio.play();
+                icon.className = 'fa-solid fa-pause';
+                btn.classList.add('playing');
+            } else {
+                audio.pause();
+                icon.className = 'fa-solid fa-play';
+                btn.classList.remove('playing');
+            }
+        }
+    </script>
 </body>
 </html>
