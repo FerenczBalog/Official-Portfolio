@@ -3,160 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferencz Balog - director of photography</title>
+    <title>Balog Ferencz — DoP & Commercial Photography</title>
 
-    <link rel="stylesheet" href="/style.css">
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="Cinematography, Commercial Product Photography, and Event Coverage by Ferencz Balog. Based in Cluj-Napoca.">
+    <meta property="og:title" content="Balog Ferencz — DoP & Photography Services">
+    <meta property="og:description" content="Film Cinematography, Studio Product Photography & Corporate Event Coverage.">
+    <meta property="og:image" content="/img/Logo-dirOfPhotography.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="/img/Logo-dirOfPhotography.png">
 
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/expertise/director_of_photography/dop-style.css">
 </head>
 <body>
 
-    <header>
-        <a href="/index.html"><img src="/img/Logo-dirOfPhotography.png" alt="Ferencz Balog" id="logo-pic"></a>
+    <div class="split-container">
 
-            <nav>
-                <a href="#Photography">Photography</a>
-                <a href="#Videography">Videography</a>
-                <a href="#Drone">Drone</a>  
-                <a href="#Contact">Contact</a>     
-            </nav>
-    </header>
+        <!-- FIX BAL OLDAL (SIDEBAR) -->
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <a href="/index.html">
+                    <img src="/img/Logo-dirOfPhotography.png" alt="Ferencz Balog Logo" class="sidebar-logo">
+                </a>
+                
+                <div class="profile-info">
+                    <h1>Balog Ferencz</h1>
+                    <p class="subtitle">DoP & Photographer</p>
+                </div>
 
-    <section id="Home">
+                <nav class="sidebar-nav">
+                    <a href="#Showreel"><i class="fa-solid fa-play"></i> Showreel</a>
+                    <a href="#Videography"><i class="fa-solid fa-film"></i> Cinematography</a>
+                    <a href="#ProductPhotography"><i class="fa-solid fa-box-open"></i> Product Photography</a>
+                    <a href="#EventPhotography"><i class="fa-solid fa-camera"></i> Event Photography</a>
+                    <a href="#Contact"><i class="fa-solid fa-paper-plane"></i> Contact & Quote</a>
+                </nav>
 
-            <a href="/index.html"><img src="/img/Logo-dirOfPhotography.png" alt="Ferencz Balog" id="logo-pic"></a>
+                <div class="sidebar-footer">
+                    <div class="socials">
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://vimeo.com" target="_blank" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i></a>
+                        <a href="mailto:info@ferenczbalog.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <p>© 2026 Balog Ferencz</p>
+                </div>
+            </div>
+        </aside>
 
-            <nav>
-                <a href="#Photography">Photography</a>
-                <a href="#Videography">Videography</a>
-                <a href="#Drone">Drone</a>  
-                <a href="#Contact">Contact</a>     
-            </nav>
+        <!-- GÖRGETHETŐ JOBB OLDAL (CONTENT) -->
+        <main class="main-content">
+
+            <!-- 01. SHOWREEL -->
+            <section id="Showreel" class="content-block">
+                <div class="block-title">
+                    <h2>01. Showreel & Highlights</h2>
+                </div>
+                <div class="featured-reel-card">
+                    <div class="video-preview-box" onclick="openVideoModal('/expertise/director_of_photography/video/A Verem v1.2.mp4', 'Cinematography Showreel')">
+                        <video muted loop playsinline class="preview-thumb">
+                            <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <i class="fa-solid fa-play"></i>
+                            <span>Play Selected Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-details">
+                        <h3>Selected Cinematography Reel</h3>
+                        <div class="tech-specs">
+                            <span><i class="fa-solid fa-video"></i> ARRI / RED / Blackmagic</span>
+                            <span><i class="fa-solid fa-expand"></i> 2.39:1 Anamorphic</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02. CINEMATOGRAPHY / SLIDESHOW VIDEÓKKAL -->
+            <section id="Videography" class="content-block">
+                <div class="block-title">
+                    <h2>02. Narrative & Commercial Cinematography</h2>
+                </div>
+
+                <div class="video-slider-container">
+                    <button class="slider-arrow prev" onclick="moveVideoSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    
+                    <div class="video-slider-track" id="videoSliderTrack">
+                        <!-- Video 1 -->
+                        <div class="video-item slide">
+                            <div class="video-header">
+                                <div>
+                                    <h3>A Verem</h3>
+                                    <p class="project-subtitle">Noir Short Film</p>
+                                </div>
+                                <span class="badge">Short Film</span>
+                            </div>
+                            <div class="video-wrapper" onclick="openVideoModal('/expertise/director_of_photography/video/A Verem v1.2.mp4', 'A Verem — Noir Short Film')">
+                                <video poster="/expertise/director_of_photography/img/portrait/portrait.jpg">
+                                    <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
+                                </video>
+                                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <div class="tech-specs">
+                                <span>CAM: Blackmagic Cinema</span>
+                                <span>LENS: Vintage Primes</span>
+                                <span>RATIO: 2.39:1</span>
+                            </div>
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div class="video-item slide">
+                            <div class="video-header">
+                                <div>
+                                    <h3>Stop Motion Commercial</h3>
+                                    <p class="project-subtitle">Puppet Animation & Precision Lighting</p>
+                                </div>
+                                <span class="badge">Commercial</span>
+                            </div>
+                            <div class="video-wrapper" onclick="openVideoModal('/expertise/director_of_photography/video/A Verem v1.2.mp4', 'Stop Motion Commercial')">
+                                <video>
+                                    <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
+                                </video>
+                                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <div class="tech-specs">
+                                <span>TECH: Physical Armature</span>
+                                <span>LIGHTING: Studio Grid</span>
+                                <span>ROLE: DoP / Animator</span>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="video-item slide">
+                            <div class="video-header">
+                                <div>
+                                    <h3>Action Sequence Reel</h3>
+                                    <p class="project-subtitle">High Speed Camera & Dynamic Rigging</p>
+                                </div>
+                                <span class="badge">Action</span>
+                            </div>
+                            <div class="video-wrapper" onclick="openVideoModal('/expertise/director_of_photography/video/A Verem v1.2.mp4', 'Action Sequence Reel')">
+                                <video>
+                                    <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
+                                </video>
+                                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <div class="tech-specs">
+                                <span>CAM: RED V-Raptor</span>
+                                <span>FPS: 120fps High-Speed</span>
+                                <span>RATIO: 2.39:1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-arrow next" onclick="moveVideoSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+                    <!-- Slider Indikátor Pontok -->
+                    <div class="slider-dots" id="sliderDots">
+                        <span class="dot active" onclick="setVideoSlide(0)"></span>
+                        <span class="dot" onclick="setVideoSlide(1)"></span>
+                        <span class="dot" onclick="setVideoSlide(2)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03. TERMÉKFOTÓZÁS (5 FOTÓ A KATEGÓRIÁBAN) -->
+            <section id="ProductPhotography" class="content-block">
+                <div class="block-title">
+                    <h2>03. Commercial & Product Photography</h2>
+                </div>
+                <p class="section-intro">High-end studio photography for e-commerce, branding, and advertising. Click any photo to view in full resolution.</p>
+
+                <div class="photo-grid-5">
+                    <div class="photo-card" onclick="openImageModal(0, 'product')">
+                        <img src="/expertise/director_of_photography/img/portrait/portrait.jpg" alt="Studio Product Shot 1">
+                        <div class="photo-info">
+                            <h4>Studio Composition</h4>
+                            <span class="tech-tag">High-CRI Lighting</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(1, 'product')">
+                        <img src="/expertise/director_of_photography/img/Building/building_1.jpg" alt="E-Commerce Catalog 2">
+                        <div class="photo-info">
+                            <h4>E-Commerce Catalog</h4>
+                            <span class="tech-tag">Clean Backdrop</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(2, 'product')">
+                        <img src="/expertise/director_of_photography/img/Nature/nature_1.jpg" alt="Lifestyle Product 3">
+                        <div class="photo-info">
+                            <h4>Lifestyle Editorial</h4>
+                            <span class="tech-tag">On-Location</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(3, 'product')">
+                        <img src="/expertise/director_of_photography/img/Building/building_2.jpg" alt="Macro Detail 4">
+                        <div class="photo-info">
+                            <h4>Texture & Macro</h4>
+                            <span class="tech-tag">Color-Calibrated</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(4, 'product')">
+                        <img src="/expertise/director_of_photography/img/Nature/nature_2.jpg" alt="Packaging Shot 5">
+                        <div class="photo-info">
+                            <h4>Packaging & Branding</h4>
+                            <span class="tech-tag">Studio Setup</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04. ESEMÉNYFOTÓZÁS (5 FOTÓ A KATEGÓRIÁBAN) -->
+            <section id="EventPhotography" class="content-block">
+                <div class="block-title">
+                    <h2>04. Event & Corporate Photography</h2>
+                </div>
+                <p class="section-intro">Coverage for festivals, cultural gatherings, corporate conferences, and stage performances.</p>
+
+                <div class="photo-grid-5">
+                    <div class="photo-card" onclick="openImageModal(0, 'event')">
+                        <img src="/expertise/director_of_photography/img/Travel/travel_1.jpg" alt="Live Event Stage 1">
+                        <div class="photo-info">
+                            <h4>Stage & Festivals</h4>
+                            <span class="tech-tag">Low-Light Dynamic</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(1, 'event')">
+                        <img src="/expertise/director_of_photography/img/portrait/portrait.jpg" alt="Corporate Conference 2">
+                        <div class="photo-info">
+                            <h4>Corporate Keynote</h4>
+                            <span class="tech-tag">Candid Moments</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(2, 'event')">
+                        <img src="/expertise/director_of_photography/img/Travel/travel_2.jpg" alt="Backstage BTS 3">
+                        <div class="photo-info">
+                            <h4>Backstage & BTS</h4>
+                            <span class="tech-tag">Documentary Style</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(3, 'event')">
+                        <img src="/expertise/director_of_photography/img/Travel/travel_3.jpg" alt="Cultural Biennale 4">
+                        <div class="photo-info">
+                            <h4>Cultural Gatherings</h4>
+                            <span class="tech-tag">Atmospheric Light</span>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openImageModal(4, 'event')">
+                        <img src="/expertise/director_of_photography/img/Building/building_3.jpg" alt="Venue Architecture 5">
+                        <div class="photo-info">
+                            <h4>Venue & Atmosphere</h4>
+                            <span class="tech-tag">Wide Angle Stills</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05. CONTACT & QUOTE -->
+            <section id="Contact" class="content-block contact-block">
+                <div class="block-title">
+                    <h2>05. Contact & Booking</h2>
+                </div>
+                <p>Available for commercial projects, product shoots, and event coverage in Cluj-Napoca and worldwide.</p>
+                <div class="quote-notice">
+                    <p><i class="fa-solid fa-circle-info"></i> For product or event quotes, please include the date, location, and total deliverables needed.</p>
+                </div>
+                <div class="contact-actions">
+                    <a href="mailto:info@ferenczbalog.com" class="direct-email"><i class="fa-solid fa-envelope"></i> info@ferenczbalog.com</a>
+                    <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Cluj-Napoca, Romania</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- VIDEO MODAL -->
+    <div id="videoModal" class="modal" onclick="closeVideoModal(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideoModal(event)">&times;</span>
+            <h3 id="modalTitle">Project Title</h3>
+            <div class="modal-video-container">
+                <video id="modalVideo" controls autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE LIGHTBOX MODAL (FOTÓ NÉZEGETŐ) -->
+    <div id="imageModal" class="modal img-modal" onclick="closeImageModal(event)">
+        <span class="close-btn" onclick="closeImageModal(event)">&times;</span>
+        <button class="modal-arrow prev" onclick="changeImage(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="img-modal-content">
+            <img id="modalImage" src="" alt="Full Resolution Photo">
+            <p id="modalImageCaption" class="img-caption"></p>
+        </div>
+        <button class="modal-arrow next" onclick="changeImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- JAVASCRIPT: SLIDER & MODALS -->
+    <script>
+        // --- 1. VIDEÓ SLIDER ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.video-item.slide');
+        const dots = document.querySelectorAll('.slider-dots .dot');
+
+        function updateSlider() {
+            const track = document.getElementById('videoSliderTrack');
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-    </section>
-    
-    <section id="Photography" class="content-section">
-        <h2>Photography</h2> 
-        
-        <div class="content-box">
-            <h3>Categories</h3>
-            <a href="#Portrait">Portrait</a> 
-            <a href="#Nature">Nature</a> 
-            <a href="#Travel">Travel</a> 
-            <a href="#Building">Building</a>
-        </div>
-        
-        <div class="content-box">
-            <h3>Portrait</h3>
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
 
-            <div class="gallery">
-                <img src="/expertise/director_of_photography/img/portrait/portrait.jpg" alt="Portrait Photography">
-                <img src="/expertise/director_of_photography/img/portrait/portrait.jpg" alt="Portrait Photography">
-                <img src="/expertise/director_of_photography/img/portrait/portrait.jpg" alt="Portrait Photography">
-            </div>
-        </div>
+        function moveVideoSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            updateSlider();
+        }
 
-        <div class="content-box">
-            <h3>Nature</h3>
+        function setVideoSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
 
-            <div class="gallery">
-                <img src="/expertise/director_of_photography/img/Nature/nature_1.jpg" alt="Nature Photography">
-                <img src="/expertise/director_of_photography/img/Nature/nature_2.jpg" alt="Nature Photography">
-                <img src="/expertise/director_of_photography/img/Nature/nature_3.jpg" alt="Nature Photography">
-            </div>
-        </div>
+        // --- 2. VIDEÓ MODAL ---
+        function openVideoModal(videoSrc, title) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            const modalTitle = document.getElementById('modalTitle');
 
-        <div class="content-box">
-            <h3>Travel</h3>
+            video.src = videoSrc;
+            modalTitle.textContent = title;
+            modal.classList.add('active');
+        }
 
-            <div class="gallery">
-                <img src="/expertise/director_of_photography/img/Travel/travel_1.jpg" alt="Travel Photography">
-                <img src="/expertise/director_of_photography/img/Travel/travel_2.jpg" alt="Travel Photography">
-                <img src="/expertise/director_of_photography/img/Travel/travel_3.jpg" alt="Travel Photography">
-            </div>
-        </div>
+        function closeVideoModal(event) {
+            if (event.target.id === 'videoModal' || event.target.className === 'close-btn') {
+                const modal = document.getElementById('videoModal');
+                const video = document.getElementById('modalVideo');
+                modal.classList.remove('active');
+                video.pause();
+                video.src = '';
+            }
+        }
 
-        <div class="content-box">
-            <h3>Building</h3>
+        // --- 3. FOTÓ LIGHTBOX GALÉRIA ---
+        const photoGalleries = {
+            product: [
+                { src: "/expertise/director_of_photography/img/portrait/portrait.jpg", caption: "Studio Composition — High-CRI Lighting" },
+                { src: "/expertise/director_of_photography/img/Building/building_1.jpg", caption: "E-Commerce Catalog — Clean Backdrop" },
+                { src: "/expertise/director_of_photography/img/Nature/nature_1.jpg", caption: "Lifestyle Editorial — On-Location" },
+                { src: "/expertise/director_of_photography/img/Building/building_2.jpg", caption: "Texture & Macro — Color-Calibrated" },
+                { src: "/expertise/director_of_photography/img/Nature/nature_2.jpg", caption: "Packaging & Branding — Studio Setup" }
+            ],
+            event: [
+                { src: "/expertise/director_of_photography/img/Travel/travel_1.jpg", caption: "Stage & Festivals — Low-Light Dynamic" },
+                { src: "/expertise/director_of_photography/img/portrait/portrait.jpg", caption: "Corporate Keynote — Candid Moments" },
+                { src: "/expertise/director_of_photography/img/Travel/travel_2.jpg", caption: "Backstage & BTS — Documentary Style" },
+                { src: "/expertise/director_of_photography/img/Travel/travel_3.jpg", caption: "Cultural Gatherings — Atmospheric Light" },
+                { src: "/expertise/director_of_photography/img/Building/building_3.jpg", caption: "Venue & Atmosphere — Wide Angle Stills" }
+            ]
+        };
 
-            <div class="gallery">
-                <img src="/expertise/director_of_photography/img/Building/building_1.jpg" alt="Building Photography">
-                <img src="/expertise/director_of_photography/img/Building/building_2.jpg" alt="Building Photography">
-                <img src="/expertise/director_of_photography/img/Building/building_3.jpg" alt="Building Photography">
-            </div>
-        </div>
+        let currentCategory = 'product';
+        let currentImgIndex = 0;
 
-    </section>
+        function openImageModal(index, category) {
+            currentCategory = category;
+            currentImgIndex = index;
+            
+            const modal = document.getElementById('imageModal');
+            updateModalImage();
+            modal.classList.add('active');
+            
+            // Billentyűzet nyilak kezelése
+            document.addEventListener('keydown', handleKeyPress);
+        }
 
-    <section id="Videography" class="content-section">
-        <h2>Videography</h2>
-        
-        <div class="content-box">
-            <h3>Noir</h3>
+        function updateModalImage() {
+            const imgData = photoGalleries[currentCategory][currentImgIndex];
+            document.getElementById('modalImage').src = imgData.src;
+            document.getElementById('modalImageCaption').textContent = imgData.caption;
+        }
 
-            <div class="video-container">
-                <video controls>
-                    <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
+        function changeImage(direction) {
+            const list = photoGalleries[currentCategory];
+            currentImgIndex = (currentImgIndex + direction + list.length) % list.length;
+            updateModalImage();
+        }
 
-        <div class="content-box">
-            <h3>Stop Motion</h3>
+        function closeImageModal(event) {
+            if (event.target.id === 'imageModal' || event.target.className === 'close-btn') {
+                const modal = document.getElementById('imageModal');
+                modal.classList.remove('active');
+                document.removeEventListener('keydown', handleKeyPress);
+            }
+        }
 
-            <div class="video-container">
-                <video controls>
-                    <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <div class="content-box">
-            <h3>Action</h3>
-
-            <div class="video-container">
-                <video controls>
-                    <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="Drone" class="content-section">
-        <h2>Drone</h2>
-        
-        <div class="content-box">
-            <h3>Drone Footage</h3>
-
-            <div class="video-container">
-                <video controls>
-                    <source src="/expertise/director_of_photography/video/A Verem v1.2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-    
-    <Footer id="footer-box">
-            <p>Copyright © 2026 Balog Ferencz. All rights reserved.</p>
-    </Footer>
-    
+        function handleKeyPress(e) {
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'ArrowRight') changeImage(1);
+            if (e.key === 'Escape') {
+                document.getElementById('imageModal').classList.remove('active');
+                document.removeEventListener('keydown', handleKeyPress);
+            }
+        }
+    </script>
 </body>
 </html>
-
-<script>
-    window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    
-    if (window.scrollY > 50) { // 50px görgetés után jelenik meg
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-</script>

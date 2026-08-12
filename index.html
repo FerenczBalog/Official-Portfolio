@@ -3,31 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferencz Balog</title>
+    <title>Balog Ferencz — Creative Portfolio</title>
 
-    <link rel="stylesheet" href="/style.css">
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="/ResetCss.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="/main.css">
 </head>
 <body>
 
-    <section id="Home">
+    <header class="landing-header">
+        <div class="logo-wrapper">
+            <img src="/img/Logo-general.png" alt="Balog Ferencz" class="main-logo">
+        </div>
+        <p class="tagline">Audio • Visual • Digital Development</p>
+    </header>
 
-            <img src="/img/Logo-general.png" alt="Ferencz Balog" id="logo-pic">
+    <main class="expertise-container">
+        
+        <!-- Sound Engineer -->
+        <a href="/expertise/sound_engineer/soundEngineer.html" class="expertise-card sound">
+            <div class="glow-effect"></div>
+            <div class="card-top">
+                <span class="card-num">01</span>
+                <div class="icon-box"><i class="fa-solid fa-sliders"></i></div>
+            </div>
+            <div class="card-bottom">
+                <h2>Sound Engineer</h2>
+                <p>Post-production, mixing, mastering & sound design.</p>
+                <div class="card-action">
+                    <span>Explore Work</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </div>
+        </a>
 
-            <nav>
-                <a href="/expertise/sound_engineer/soundEngineer.html">Sound Engineer</a>
-                <a href="/expertise/director_of_photography/dirOfPhotography.html">Director of Photography</a>
-                <a href="/expertise/web_developer/webDeveloper.html">Web Developer</a>       
-            </nav>
-            
-    </section>
+        <!-- Director of Photography -->
+        <a href="/expertise/director_of_photography/dirOfPhotography.html" class="expertise-card dop">
+            <div class="glow-effect"></div>
+            <div class="card-top">
+                <span class="card-num">02</span>
+                <div class="icon-box"><i class="fa-solid fa-film"></i></div>
+            </div>
+            <div class="card-bottom">
+                <h2>Director of Photography</h2>
+                <p>Cinematography, narrative, commercial & aerial drone.</p>
+                <div class="card-action">
+                    <span>Explore Work</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </div>
+        </a>
 
-    <Footer id="footer-box">
-            <p>Copyright © 2026 Balog Ferencz. All rights reserved.</p>
-    </Footer>
-    
+        <!-- Web Developer -->
+        <a href="/expertise/web_developer/webDeveloper.html" class="expertise-card dev">
+            <div class="glow-effect"></div>
+            <div class="card-top">
+                <span class="card-num">03</span>
+                <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+            </div>
+            <div class="card-bottom">
+                <h2>Web Developer</h2>
+                <p>Full-stack web applications, custom platforms & UI/UX.</p>
+                <div class="card-action">
+                    <span>Explore Work</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </div>
+        </a>
+
+    </main>
+
+    <footer class="landing-footer">
+        <p>© 2026 Balog Ferencz. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

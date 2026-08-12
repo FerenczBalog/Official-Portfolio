@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.landing-header {
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+.main-logo {
+    max-height: 55px; /* Kisebb logó */
+    width: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.08));
+}
+
+.tagline {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+/* CONTAINER — Szűkített maximális szélesség */
+.expertise-container {
+    display: flex;
+    gap: 18px; /* Kisebb hézag a kártyák között */
+    max-width: 980px; /* 1250px-ről csökkentve */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    align-items: center; /* Középre igazítás függőlegesen */
+    justify-content: center;
+}
+
+/* CARDS BASE — Visszafogottabb méretezés */
+.expertise-card {
+    flex: 1;
+    position: relative;
+    background: #0f0f0f;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 24px 22px; /* Csökkentett belső margó (40px-ről 24px-re) */
+    min-height: 280px;  /* Fix, visszafogottabb magasság */
+    max-height: 320px;
+    text-decoration: none;
+    color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* GLOW EFFECTS */
+.glow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sound .glow-effect {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 120, 0, 0.12) 0%, transparent 70%);
+}
+
+.dop .glow-effect {
+    background: radial-gradient(circle at 50% 0%, rgba(0, 150, 255, 0.12) 0%, transparent 70%);
+}
+
+.dev .glow-effect {
+    background: radial-gradient(circle at 50% 0%, rgba(0, 255, 150, 0.12) 0%, transparent 70%);
+}
+
+/* CARD TOP */
+.card-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: #444444;
+    transition: color 0.4s ease;
+}
+
+.icon-box {
+    font-size: 1.3rem; /* Kisebb ikonok */
+    color: #666666;
+    transition: all 0.4s ease;
+}
+
+/* CARD BOTTOM */
+.card-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.expertise-card h2 {
+    font-size: 1.25rem; /* Visszafogottabb címsor */
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+    transition: transform 0.4s ease;
+}
+
+.expertise-card p {
+    font-size: 0.82rem; /* Finomabb leíró szöveg */
+    color: #888888;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    transition: color 0.4s ease;
+}
+
+/* ACTION BUTTON INSIDE CARD */
+.card-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777777;
+    transition: all 0.4s ease;
+}
+
+.card-action i {
+    font-size: 0.8rem;
+    transition: transform 0.4s ease;
+}
+
+/* INTERACTIVE HOVER STATES */
+.expertise-card:hover {
+    flex: 1.12; /* Finomabb tágulási effekt (1.25 helyett) */
+    border-color: rgba(255, 255, 255, 0.22);
+    background: #131313;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.expertise-card:hover .glow-effect {
+    opacity: 1;
+}
+
+.expertise-card:hover .card-num {
+    color: #ffffff;
+}
+
+.expertise-card:hover .icon-box {
+    color: #ffffff;
+    transform: scale(1.1) rotate(-4deg);
+}
+
+.expertise-card:hover p {
+    color: #cccccc;
+}
+
+.expertise-card:hover .card-action {
+    color: #ffffff;
+}
+
+.expertise-card:hover .card-action i {
+    transform: translateX(5px);
+}
+
+/* FOOTER */
+.landing-footer {
+    text-align: center;
+    color: #333333;
+    font-size: 0.75rem;
+    padding-top: 20px;
+}
+
+/* MOBIL NÉZET */
+@media (max-width: 850px) {
+    .expertise-container {
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .expertise-card {
+        width: 100%;
+        min-height: auto;
+        max-height: none;
+    }
+
+    .expertise-card:hover {
+        flex: 1;
+        transform: translateY(-2px);
+    }
+}
