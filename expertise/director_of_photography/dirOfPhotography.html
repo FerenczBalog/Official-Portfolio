@@ -40,7 +40,6 @@
                 <nav class="sidebar-nav">
                     <a href="#Showreel"><i class="fa-solid fa-play"></i> Showreel</a>
                     <a href="#Videography"><i class="fa-solid fa-film"></i> Cinematography</a>
-                    <!-- <a href="#ProductPhotography"><i class="fa-solid fa-box-open"></i> Product Photography</a> -->
                     <a href="#EventPhotography"><i class="fa-solid fa-camera"></i> Event Photography</a>
                     <a href="#Contact"><i class="fa-solid fa-paper-plane"></i> Contact & Quote</a>
                 </nav>
@@ -173,117 +172,60 @@
                 </div>
             </section>
 
-            <!-- 03. TERMÉKFOTÓZÁS (KIKOMMENTELVE) -->
-            <!-- 
-            <section id="ProductPhotography" class="content-block">
+            <!-- 03. ESEMÉNYFOTÓZÁS (4 KATEGÓRIA) -->
+            <section id="EventPhotography" class="content-block">
                 <div class="block-title">
-                    <h2>03. Commercial & Product Photography</h2>
+                    <h2>03. Event & Corporate Photography</h2>
                 </div>
-                <p class="section-intro">High-end studio photography for e-commerce, branding, and advertising. Click any photo to view in full resolution.</p>
+                <p class="section-intro">Comprehensive visual documentation for corporate summits, cultural festivals, live stage performances, and exclusive networking galas. Select any category to view the full showcase.</p>
 
                 <div class="photo-grid-5">
-                    <div class="photo-card" onclick="openImageModal(0, 'product')">
-                        <img src="/expertise/director_of_photography/img/portrait/portrait.jpg" alt="Studio Product Shot 1">
+                    
+                    <!-- 1. Corporate & Keynotes (5 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'corporate')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/CorpNkey/1.webp" alt="Corporate Keynote Conference">
                         <div class="photo-info">
-                            <h4>Studio Composition</h4>
-                            <span class="tech-tag">High-CRI Lighting</span>
+                            <h4>Corporate & Keynotes</h4>
+                            <span class="tech-tag">5 Photos • Conferences & Talks</span>
                         </div>
                     </div>
-                    <div class="photo-card" onclick="openImageModal(1, 'product')">
-                        <img src="/expertise/director_of_photography/img/Building/building_1.jpg" alt="E-Commerce Catalog 2">
+
+                    <!-- 2. Cultural & Stage (4 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'stage')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/CultNstage/1.webp" alt="Live Stage Performance">
                         <div class="photo-info">
-                            <h4>E-Commerce Catalog</h4>
-                            <span class="tech-tag">Clean Backdrop</span>
+                            <h4>Cultural & Stage</h4>
+                            <span class="tech-tag">4 Photos • Festivals & Stage</span>
                         </div>
                     </div>
-                    <div class="photo-card" onclick="openImageModal(2, 'product')">
-                        <img src="/expertise/director_of_photography/img/Nature/nature_1.jpg" alt="Lifestyle Product 3">
+
+                    <!-- 3. Backstage & BTS (2 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'bts')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/Backstage/1.webp" alt="Backstage Documentary">
                         <div class="photo-info">
-                            <h4>Lifestyle Editorial</h4>
-                            <span class="tech-tag">On-Location</span>
+                            <h4>Backstage & BTS</h4>
+                            <span class="tech-tag">2 Photos • Behind The Scenes</span>
                         </div>
                     </div>
-                    <div class="photo-card" onclick="openImageModal(3, 'product')">
-                        <img src="/expertise/director_of_photography/img/Building/building_2.jpg" alt="Macro Detail 4">
+
+                    <!-- 4. Networking & Galas (2 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'networking')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/Networking/1.webp" alt="Networking Event Gala">
                         <div class="photo-info">
-                            <h4>Texture & Macro</h4>
-                            <span class="tech-tag">Color-Calibrated</span>
+                            <h4>Networking & Galas</h4>
+                            <span class="tech-tag">2 Photos • Receptions & VIP</span>
                         </div>
                     </div>
-                    <div class="photo-card" onclick="openImageModal(4, 'product')">
-                        <img src="/expertise/director_of_photography/img/Nature/nature_2.jpg" alt="Packaging Shot 5">
-                        <div class="photo-info">
-                            <h4>Packaging & Branding</h4>
-                            <span class="tech-tag">Studio Setup</span>
-                        </div>
-                    </div>
+
                 </div>
-            </section> 
-            -->
+            </section>
 
-            <!-- 03. ESEMÉNYFOTÓZÁS (OPTIMALIZÁLT KATEGÓRIÁK) -->
-<section id="EventPhotography" class="content-block">
-    <div class="block-title">
-        <h2>03. Event & Corporate Photography</h2>
-    </div>
-    <p class="section-intro">Comprehensive visual documentation for corporate summits, cultural festivals, live stage performances, and exclusive networking galas. Focused on dynamic low-light handling and candid storytelling.</p>
-
-    <div class="photo-grid-5">
-        
-        <!-- 1. Corporate & Conferences -->
-        <div class="photo-card" onclick="openImageModal(0, 'event')">
-            <img src="/expertise/director_of_photography/img/portrait/portrait.jpg" alt="Corporate Keynote Conference">
-            <div class="photo-info">
-                <h4>Corporate & Keynotes</h4>
-                <span class="tech-tag">Conferences • Executive Talks</span>
-            </div>
-        </div>
-
-        <!-- 2. Cultural & Live Stage -->
-        <div class="photo-card" onclick="openImageModal(1, 'event')">
-            <img src="/expertise/director_of_photography/img/Travel/travel_1.jpg" alt="Live Stage Performance">
-            <div class="photo-info">
-                <h4>Cultural & Stage</h4>
-                <span class="tech-tag">Festivals • Live Performances</span>
-            </div>
-        </div>
-
-        <!-- 3. Backstage & BTS -->
-        <div class="photo-card" onclick="openImageModal(2, 'event')">
-            <img src="/expertise/director_of_photography/img/Travel/travel_2.jpg" alt="Backstage Documentary">
-            <div class="photo-info">
-                <h4>Backstage & BTS</h4>
-                <span class="tech-tag">Production • Behind The Scenes</span>
-            </div>
-        </div>
-
-        <!-- 4. Networking & Social Galas -->
-        <div class="photo-card" onclick="openImageModal(3, 'event')">
-            <img src="/expertise/director_of_photography/img/Travel/travel_3.jpg" alt="Networking Event Gala">
-            <div class="photo-info">
-                <h4>Networking & Galas</h4>
-                <span class="tech-tag">Receptions • VIP Dinners</span>
-            </div>
-        </div>
-
-        <!-- 5. Venue & Ambiance -->
-        <div class="photo-card" onclick="openImageModal(4, 'event')">
-            <img src="/expertise/director_of_photography/img/Building/building_3.jpg" alt="Venue Architecture">
-            <div class="photo-info">
-                <h4>Venue & Ambiance</h4>
-                <span class="tech-tag">Architectural Stills • Lighting</span>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-            <!-- 04. CONTACT & QUOTE (SORSZÁM JAVÍTVA: 05 -> 04) -->
+            <!-- 04. CONTACT & QUOTE -->
             <section id="Contact" class="content-block contact-block">
                 <div class="block-title">
                     <h2>04. Contact & Booking</h2>
                 </div>
-                <p>Available for commercial projects, product shoots, and event coverage in Cluj-Napoca and worldwide.</p>
+                <p>Available for commercial projects, product shoots, and event coverage.</p>
                 <div class="quote-notice">
                     <p><i class="fa-solid fa-circle-info"></i> For event or video coverage quotes, please include the date, location, and total deliverables needed.</p>
                 </div>
@@ -365,25 +307,78 @@
             }
         }
 
-        // --- 3. FOTÓ LIGHTBOX GALÉRIA ---
+        // --- 3. FOTÓ LIGHTBOX GALÉRIA (WEBP FÁJLOK) ---
         const photoGalleries = {
-            product: [
-                { src: "/expertise/director_of_photography/img/portrait/portrait.jpg", caption: "Studio Composition — High-CRI Lighting" },
-                { src: "/expertise/director_of_photography/img/Building/building_1.jpg", caption: "E-Commerce Catalog — Clean Backdrop" },
-                { src: "/expertise/director_of_photography/img/Nature/nature_1.jpg", caption: "Lifestyle Editorial — On-Location" },
-                { src: "/expertise/director_of_photography/img/Building/building_2.jpg", caption: "Texture & Macro — Color-Calibrated" },
-                { src: "/expertise/director_of_photography/img/Nature/nature_2.jpg", caption: "Packaging & Branding — Studio Setup" }
+            // 1. Corporate & Keynotes (5 fotó)
+            corporate: [
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/1.webp", 
+                    caption: "Corporate & Keynotes — Candid Interaction during an Executive Roundtable Session" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/2.webp", 
+                    caption: "Corporate & Keynotes — Professional Dialogue & Informal Networking Reception" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/3.webp", 
+                    caption: "Corporate & Keynotes — Keynote Hall Overview & Stage Atmosphere" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/4.webp", 
+                    caption: "Corporate & Keynotes — Audience Immersion & Live Presentation Reactions" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/5.webp", 
+                    caption: "Corporate & Keynotes — Keynote Speaker Addressing the Conference" 
+                }
             ],
-            event: [
-                { src: "/expertise/director_of_photography/img/portrait/portrait.jpg", caption: "Corporate & Keynotes — Executive Presentations & Panel Discussions" },
-                { src: "/expertise/director_of_photography/img/Travel/travel_1.jpg", caption: "Cultural & Stage — High-Dynamic Stage & Festival Coverage" },
-                { src: "/expertise/director_of_photography/img/Travel/travel_2.jpg", caption: "Backstage & BTS — Documentary On-Set & Behind The Scenes" },
-                { src: "/expertise/director_of_photography/img/Travel/travel_3.jpg", caption: "Networking & Galas — Candid Moments & VIP Receptions" },
-                { src: "/expertise/director_of_photography/img/Building/building_3.jpg", caption: "Venue & Ambiance — Interior Architecture & Atmospheric Lighting" }
+
+            // 2. Cultural & Stage (4 fotó)
+            stage: [
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/1.webp", 
+                    caption: "Cultural & Stage — Detailed Stage Character Focus & Dynamic Color Rendering" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/2.webp", 
+                    caption: "Cultural & Stage — Atmospheric Low-Light Scene & Dramatic Blue Key Light" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/3.webp", 
+                    caption: "Cultural & Stage — Precision Spot Lighting & Puppet Character Detail" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/4.webp", 
+                    caption: "Cultural & Stage — Live Puppetry Performance & On-Stage Artist Interaction" 
+                }
+            ],
+
+            // 3. Backstage & BTS (2 fotó)
+            bts: [
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/Backstage/1.webp", 
+                    caption: "Backstage & BTS — Crew Collaboration & Team Camaraderie Behind the Scenes" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/Backstage/2.webp", 
+                    caption: "Backstage & BTS — On-Set Production Workflow & Live Character Preparation" 
+                }
+            ],
+
+            // 4. Networking & Galas (2 fotó)
+            networking: [
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/Networking/1.webp", 
+                    caption: "Networking & Galas — Candid Engagement & Active Listening During Social Dialogue" 
+                },
+                { 
+                    src: "/expertise/director_of_photography/img/eventPhoto/Networking/2.webp", 
+                    caption: "Networking & Galas — Group Connections & Warm Evening Reception Ambiance" 
+                }
             ]
         };
 
-        let currentCategory = 'event';
+        let currentCategory = 'corporate';
         let currentImgIndex = 0;
 
         function openImageModal(index, category) {
@@ -400,12 +395,15 @@
 
         function updateModalImage() {
             const imgData = photoGalleries[currentCategory][currentImgIndex];
-            document.getElementById('modalImage').src = imgData.src;
-            document.getElementById('modalImageCaption').textContent = imgData.caption;
+            if (imgData) {
+                document.getElementById('modalImage').src = imgData.src;
+                document.getElementById('modalImageCaption').textContent = imgData.caption;
+            }
         }
 
         function changeImage(direction) {
             const list = photoGalleries[currentCategory];
+            if (!list || list.length === 0) return;
             currentImgIndex = (currentImgIndex + direction + list.length) % list.length;
             updateModalImage();
         }
