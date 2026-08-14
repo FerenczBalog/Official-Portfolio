@@ -522,6 +522,28 @@ html {
 .modal-arrow.prev { left: 30px; }
 .modal-arrow.next { right: 30px; }
 
+/* GuruShots ikon méretezése és szürkítése */
+.socials a.gurushots-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials .gurushots-icon {
+    width: 1.1em;             /* Pontosan akkora, mint a FontAwesome ikonok */
+    height: 1.1em;
+    object-fit: contain;
+    vertical-align: middle;
+    filter: opacity(0.6) grayscale(100%); /* Egységes szürke tónus alapértelmezetten */
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover effektus: Kivilágosodik / fehér lesz, ahogy a többi ikon is */
+.socials a.gurushots-link:hover .gurushots-icon {
+    filter: opacity(1) brightness(2) grayscale(0%);
+    transform: scale(1.1);
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .split-container {

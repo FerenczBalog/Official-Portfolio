@@ -94,6 +94,9 @@ html {
 .dev-notice p { font-size: 0.9rem !important; color: #ccc !important; }
 .dev-notice i { color: #8fa3ad; }
 
+.repo-box a { display: inline-flex; align-items: center; gap: 8px; color: #ffffff; text-decoration: none; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 4px; transition: all 0.3s ease; }
+.repo-box a:hover { background: #ffffff; color: #000000; border-color: #ffffff; }
+
 .direct-email { font-size: 1.6rem; font-weight: 700; color: #ffffff; text-decoration: none; border-bottom: 2px solid #ffffff; padding-bottom: 4px; }
 .location-tag { margin-top: 15px !important; font-size: 0.9rem !important; color: #666666 !important; }
 
