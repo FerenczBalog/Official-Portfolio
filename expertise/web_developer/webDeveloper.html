@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balog Ferencz — Full-Stack Web Developer</title>
+    <title>Balog Ferencz — Web Developer</title>
 
-    <meta name="description" content="Full-Stack Web Development, Drop Courier Platforms, Black Box Productions & Custom Web Applications by Ferencz Balog.">
+    <meta name="description" content="Full-Stack Web Development, Drop Courier Platforms & Custom Applications by Ferencz Balog.">
     <meta property="og:title" content="Balog Ferencz — Web Developer Portfolio">
     <meta property="og:image" content="/img/Logo-webDeveloper.png">
 
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,14 +22,14 @@
 </head>
 <body>
 
-    <!-- HAMBURGER BUTTON FOR MOBILE -->
+    <!-- HAMBURGER GOMB MOBILHOZ -->
     <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Toggle Menu">
         <i class="fa-solid fa-bars"></i>
     </button>
 
     <div class="split-container">
 
-        <!-- FIX SIDEBAR (100vh ON MOBILE OFF-CANVAS) -->
+        <!-- SIDEBAR (Desktoppon fix sáv, mobilon 80% széles / 100vh modal) -->
         <aside class="sidebar">
             <div class="sidebar-inner">
                 <a href="/index.html">
@@ -59,8 +60,14 @@
             </div>
         </aside>
 
-        <!-- MAIN CONTENT AREA -->
+        <!-- MAIN CONTENT -->
         <main class="main-content">
+
+            <!-- MOBIL LOGÓ & HEADER (Csak 768px alatt jelenik meg) -->
+            <div class="mobile-top-header">
+                <img src="/img/Logo-webDeveloper.png" alt="Balog Ferencz" class="mobile-logo">
+                <p class="mobile-tagline">Full-Stack Web Development</p>
+            </div>
 
             <!-- 01. FEATURED PROJECTS -->
             <section id="Featured" class="content-block">
@@ -76,9 +83,14 @@
                         </div>
                         <span class="badge dev-badge">Commercial Production</span>
                     </div>
-                    <p class="project-desc">Official website for event production and media services with dark-mode UI and video portfolio integration.</p>
+                    <p class="project-desc">Official website for event production and media services, featuring a modern dark-mode aesthetic and video portfolio embeds.</p>
+                    <div class="code-badge-group">
+                        <span class="code-tag">Custom Architecture</span>
+                        <span class="code-tag">JavaScript ES6+</span>
+                        <span class="code-tag">Responsive UI/UX</span>
+                    </div>
                     <div class="project-links">
-                        <a href="https://blackboxproductions.ro/" target="_blank" class="dev-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Site</a>
+                        <a href="https://blackboxproductions.ro/" target="_blank" class="dev-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit blackboxproductions.ro</a>
                     </div>
                 </div>
 
@@ -90,10 +102,34 @@
                         </div>
                         <span class="badge dev-badge">Commercial Production</span>
                     </div>
-                    <p class="project-desc">Courier management and onboarding portal for delivery operations.</p>
+                    <p class="project-desc">Official web portal for courier operations, driver registration workflows, and logistics services.</p>
+                    <div class="code-badge-group">
+                        <span class="code-tag">JavaScript ES6+</span>
+                        <span class="code-tag">SEO & Web Vitals</span>
+                        <span class="code-tag">Custom API</span>
+                    </div>
                     <div class="project-links">
                         <a href="https://www.dropcourier.ro/" target="_blank" class="dev-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit dropcourier.ro</a>
-                        <a href="https://dropnew.netlify.app/" target="_blank" class="dev-btn"><i class="fa-solid fa-vial"></i> Netlify App</a>
+                        <a href="https://dropnew.netlify.app/" target="_blank" class="dev-btn"><i class="fa-solid fa-vial"></i> Open App (Netlify)</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3>Candidate Onboarding Portal</h3>
+                            <p class="project-subtitle">Automated Driver Registration Portal</p>
+                        </div>
+                        <span class="badge dev-badge">Serverless Web App</span>
+                    </div>
+                    <p class="project-desc">Custom application engineered for candidate onboarding, document submittal, and serverless form handling.</p>
+                    <div class="code-badge-group">
+                        <span class="code-tag">Netlify Serverless</span>
+                        <span class="code-tag">Interactive Forms</span>
+                        <span class="code-tag">REST API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drop-tasku.netlify.app/" target="_blank" class="dev-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open App</a>
                     </div>
                 </div>
             </section>
@@ -101,77 +137,96 @@
             <!-- 02. TECH STACK -->
             <section id="TechStack" class="content-block">
                 <div class="block-title">
-                    <h2>02. Technical Stack</h2>
+                    <h2>02. Technical Stack & Skills</h2>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-box">
                         <i class="fa-brands fa-js skill-icon"></i>
-                        <h4>Frontend</h4>
-                        <p>JavaScript (ES6+), React, TypeScript, HTML5/CSS3.</p>
+                        <h4>Frontend Architecture</h4>
+                        <p>Modern JavaScript (ES6+), React, TypeScript, HTML5 semantic layout, CSS Grid, and responsive UI design.</p>
                     </div>
                     <div class="skill-box">
                         <i class="fa-brands fa-node-js skill-icon"></i>
                         <h4>Backend & Serverless</h4>
-                        <p>Node.js, Express, Netlify Functions, REST APIs.</p>
+                        <p>Node.js, Express, Netlify Serverless Functions, RESTful APIs, and form data systems.</p>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fa-solid fa-shield-halved skill-icon"></i>
+                        <h4>Security & Auth</h4>
+                        <p>Google Authenticator Two-Factor Authentication (2FA) integration and secure web workflow architecture.</p>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fa-solid fa-code-branch skill-icon"></i>
+                        <h4>Deployment & CI/CD</h4>
+                        <p>Git, GitHub Pages, Netlify Continuous Deployment pipelines, and Web Vitals performance optimization.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 03. CONTACT -->
-            <section id="Contact" class="content-block contact-block">
+            <!-- 03. REPOSITORIES -->
+            <section id="Repositories" class="content-block">
                 <div class="block-title">
-                    <h2>03. Contact & Hire</h2>
+                    <h2>03. GitHub Repositories</h2>
                 </div>
-                <div class="contact-actions">
-                    <a href="mailto:balogferencz.artist@gmail.com" class="direct-email"><i class="fa-solid fa-envelope"></i> balogferencz.artist@gmail.com</a>
+                <div class="repo-box">
+                    <div class="repo-header">
+                        <a href="https://ferenczbalog.github.io/" target="_blank" class="repo-link"><i class="fa-brands fa-github"></i> ferenczbalog.github.io</a>
+                        <span class="tech-tag">Maintained Repository</span>
+                    </div>
+                    <p>Source code and experimental components hosted directly on GitHub Pages platform.</p>
                 </div>
             </section>
+
+            <!-- 04. CONTACT -->
+            <section id="Contact" class="content-block contact-block">
+                <div class="block-title">
+                    <h2>04. Contact & Inquiries</h2>
+                </div>
+                <p>Available for freelance web application development, custom portal creation, and full-stack solutions.</p>
+                <div class="contact-actions">
+                    <a href="mailto:balogferencz.artist@gmail.com" class="direct-email"><i class="fa-solid fa-envelope"></i> balogferencz.artist@gmail.com</a>
+                    <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Cluj-Napoca, Romania</p>
+                </div>
+            </section>
+
+            <!-- MOBIL LÁBLÉC (Csak 768px alatt jelenik meg) -->
+            <footer class="mobile-footer">
+                <div class="footer-links">
+                    <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA</a>
+                    <a href="https://github.com/ferenczbalog" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://gurushots.com/balogferencz.artist" target="_blank"><i class="fa-solid fa-camera"></i> GuruShots</a>
+                    <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+                </div>
+                <p class="copyright">© 2026 Balog Ferencz • All rights reserved.</p>
+            </footer>
 
         </main>
     </div>
 
+    <!-- JAVASCRIPT -->
     <script>
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             const btnIcon = document.querySelector('.mobile-menu-btn i');
+            
             sidebar.classList.toggle('active');
-            btnIcon.className = sidebar.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+            
+            if (sidebar.classList.contains('active')) {
+                btnIcon.className = 'fa-solid fa-xmark';
+                document.body.style.overflow = 'hidden';
+            } else {
+                btnIcon.className = 'fa-solid fa-bars';
+                document.body.style.overflow = 'auto';
+            }
         }
 
         document.querySelectorAll('.sidebar-nav a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) toggleSidebar();
+                if (window.innerWidth <= 768) {
+                    toggleSidebar();
+                }
             });
         });
-function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    const btnIcon = document.querySelector('.mobile-menu-btn i');
-    const body = document.body;
-    
-    sidebar.classList.toggle('active');
-    
-    // Ikon váltása
-    if(sidebar.classList.contains('active')) {
-        btnIcon.className = 'fa-solid fa-xmark';
-        body.style.overflow = 'hidden'; // Háttér görgetés tiltása
-    } else {
-        btnIcon.className = 'fa-solid fa-bars';
-        body.style.overflow = 'auto'; // Háttér görgetés engedélyezése
-    }
-}
-
-// Ha a sidebar-on belül linkre kattintunk, záródjon be és oldja fel a görgetést
-document.querySelectorAll('.sidebar-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        const sidebar = document.querySelector('.sidebar');
-        const btnIcon = document.querySelector('.mobile-menu-btn i');
-        
-        sidebar.classList.remove('active');
-        btnIcon.className = 'fa-solid fa-bars';
-        document.body.style.overflow = 'auto';
-    });
-});
-
     </script>
 </body>
 </html>
