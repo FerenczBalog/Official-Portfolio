@@ -5,38 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balog Ferencz — Sound Engineer</title>
 
-    <!-- SEO & Open Graph -->
-    <meta name="description" content="Audio Engineering, Post-Production, Mixing & Sound Design portfolio of Ferencz Balog. Based in Cluj-Napoca.">
-    <meta property="og:title" content="Balog Ferencz — Sound Engineer">
-    <meta property="og:description" content="Professional Audio Mixing, Mastering, Film Sound Design & Post-Production.">
-    <meta property="og:image" content="/img/Logo-general.png">
+    <meta name="description" content="Audio Post-Production, Sound Design, Mixing & Mastering Services by Ferencz Balog.">
+    <meta property="og:title" content="Balog Ferencz — Sound Engineering Portfolio">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
 
-    <link rel="icon" type="image/png" href="/img/Logo-general.png">
-
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Balog Ferencz - Creative Portfolio" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <link rel="stylesheet" href="/expertise/sound_engineer/sound-style.css">
+    <!-- Használd a már meglévő stíluslapodat -->
+    <link rel="stylesheet" href="/expertise/sound_engineering/audio-style.css">
 </head>
 <body>
 
+    <!-- MOBIL MENU GOMB -->
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
     <div class="split-container">
 
-        <!-- FIX BAL OLDAL (SIDEBAR) -->
+        <!-- FIX SIDEBAR -->
         <aside class="sidebar">
             <div class="sidebar-inner">
                 <a href="/index.html">
-                    <img src="/img/Logo-general.png" alt="Ferencz Balog Logo" class="sidebar-logo">
+                    <img src="/img/Logo-audio.png" alt="Logo" class="sidebar-logo">
                 </a>
                 
                 <div class="profile-info">
@@ -45,135 +39,70 @@
                 </div>
 
                 <nav class="sidebar-nav">
-                    <a href="#Reel"><i class="fa-solid fa-sliders"></i> Audio Reel</a>
-                    <a href="#FilmSound"><i class="fa-solid fa-headphones"></i> Film Sound Design</a>
-                    <a href="#Mixing"><i class="fa-solid fa-compact-disc"></i> Mixing & Mastering</a>
-                    <a href="#Studio"><i class="fa-solid fa-microphone-lines"></i> Studio Setup</a>
-                    <a href="#Contact"><i class="fa-solid fa-paper-plane"></i> Contact & Quote</a>
+                    <a href="#Portfolio"><i class="fa-solid fa-headphones"></i> Sound Design & Mix</a>
+                    <a href="#Stack"><i class="fa-solid fa-sliders"></i> Equipment & DAW</a>
+                    <a href="#Contact"><i class="fa-solid fa-paper-plane"></i> Studio Booking</a>
                 </nav>
 
                 <div class="sidebar-footer">
                     <div class="socials">
-                        <a href="https://soundcloud.com" target="_blank" aria-label="SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
-                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="mailto:info@ferenczbalog.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://soundcloud.com" target="_blank"><i class="fa-brands fa-soundcloud"></i></a>
+                        <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                     <p>© 2026 Balog Ferencz</p>
                 </div>
             </div>
         </aside>
 
-        <!-- GÖRGETHETŐ JOBB OLDAL (CONTENT) -->
+        <!-- MAIN CONTENT -->
         <main class="main-content">
 
-            <!-- 01. AUDIO REEL HIGHLIGHT -->
-            <section id="Reel" class="content-block">
+            <!-- 01. PORTFOLIO -->
+            <section id="Portfolio" class="content-block">
                 <div class="block-title">
-                    <h2>01. Audio Showreel</h2>
+                    <h2>01. Audio Post & Mixing</h2>
                 </div>
-                <div class="audio-card main-reel">
-                    <div class="audio-card-header">
+                
+                <div class="project-card">
+                    <div class="project-header">
                         <div>
-                            <h3>Selected Audio Production Reel</h3>
-                            <p class="project-subtitle">Mix of Film Post-Production, Foley & Acoustic Mastering</p>
+                            <h3>Short Film Sound Design</h3>
+                            <p class="project-subtitle">Foley, Ambiance & Final Mix</p>
                         </div>
-                        <span class="badge sound-badge">Mastered 24-bit/96kHz</span>
+                        <span class="badge audio-badge">Audio Post</span>
                     </div>
-                    <div class="custom-audio-player">
-                        <button class="play-audio-btn" onclick="toggleAudio('mainAudio', this)">
-                            <i class="fa-solid fa-play"></i>
-                        </button>
-                        <div class="audio-waveform-container">
-                            <div class="waveform-bars">
-                                <!-- Díszítő hullámforma sávok -->
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <audio id="mainAudio" src="/expertise/sound_engineer/audio/showreel.mp3"></audio>
-                    </div>
-                    <div class="tech-specs">
-                        <span><i class="fa-solid fa-wave-square"></i> Stereo & Surround 5.1</span>
-                        <span><i class="fa-solid fa-sliders"></i> EBU R128 Loudness Standard</span>
-                    </div>
+                    <p class="project-desc">Complete audio post-production for narrative short films, focusing on immersive spatial sound design.</p>
                 </div>
             </section>
 
-            <!-- 02. FILM SOUND DESIGN -->
-            <section id="FilmSound" class="content-block">
+            <!-- 02. GEAR / TECH STACK -->
+            <section id="Stack" class="content-block">
                 <div class="block-title">
-                    <h2>02. Film Post-Production & Foley</h2>
+                    <h2>02. Equipment & DAW</h2>
                 </div>
-
-                <div class="audio-card">
-                    <div class="audio-card-header">
-                        <div>
-                            <h3>A Verem — Film Audio Post</h3>
-                            <p class="project-subtitle">Dialogue Cleanup, Ambience Creation & Custom Foley</p>
-                        </div>
-                        <span class="badge sound-badge">Film Audio</span>
+                <div class="skills-grid">
+                    <div class="skill-box">
+                        <i class="fa-solid fa-microphone skill-icon"></i>
+                        <h4>DAW & Software</h4>
+                        <p>Logic Pro, Pro Tools, Reaper, Izotope RX (Repair), FabFilter Suite.</p>
                     </div>
-                    <p class="project-desc">Complete audio restoration, ADR recording, and Foley sound design for a noir short film project.</p>
-                    <div class="tech-specs">
-                        <span>DAW: Pro Tools / Reaper</span>
-                        <span>MONITORS: ESI NEAR08 Studio Monitors</span>
-                        <span>FORMAT: Broadcast WAV</span>
+                    <div class="skill-box">
+                        <i class="fa-solid fa-wave-square skill-icon"></i>
+                        <h4>Hardware</h4>
+                        <p>High-end monitoring, Field recording gear, Studio setup.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 03. MIXING & MASTERING -->
-            <section id="Mixing" class="content-block">
-                <div class="block-title">
-                    <h2>03. Music Mixing & Studio Mastering</h2>
-                </div>
-                <p class="section-intro">Precision acoustic alignment, analog/digital hybrid processing, and streaming-ready audio mastering.</p>
-
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fa-solid fa-diagram-project service-icon"></i>
-                        <h4>Stem Mixing</h4>
-                        <p>Multi-track balancing, EQ carving, dynamic control, and spatial depth enhancement.</p>
-                        <span class="tech-tag">Hybrid Analog/Digital</span>
-                    </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-chart-simple service-icon"></i>
-                        <h4>Audio Mastering</h4>
-                        <p>Final polishing, loudness normalization for Spotify/Apple Music, and phase alignment.</p>
-                        <span class="tech-tag">LUFS Normalized</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 04. STUDIO SETUP -->
-            <section id="Studio" class="content-block">
-                <div class="block-title">
-                    <h2>04. Studio Environment & Gear</h2>
-                </div>
-
-                <div class="tech-grid">
-                    <div class="tech-box">
-                        <h4>Monitoring</h4>
-                        <p>ESI NEAR08 Active Nearfield Monitors, Calibrated Acoustic Room Treatment.</p>
-                    </div>
-                    <div class="tech-box">
-                        <h4>Software & Processing</h4>
-                        <p>iZotope RX Advanced, FabFilter Pro Bundle, Waves Audio, Universal Audio DSP.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 05. CONTACT -->
+            <!-- 03. CONTACT -->
             <section id="Contact" class="content-block contact-block">
                 <div class="block-title">
-                    <h2>05. Contact & Audio Booking</h2>
+                    <h2>03. Studio Booking</h2>
                 </div>
-                <p>Available for film audio post-production, sound design, and custom stem mixing.</p>
-                <div class="quote-notice sound-notice">
-                    <p><i class="fa-solid fa-circle-info"></i> For mixing or film audio inquiries, please provide stem count, sample rate, and target reference tracks.</p>
-                </div>
+                <p>Available for mixing/mastering projects, podcast post-production, and sound design for video.</p>
                 <div class="contact-actions">
-                    <a href="mailto:info@ferenczbalog.com" class="direct-email"><i class="fa-solid fa-envelope"></i> info@ferenczbalog.com</a>
-                    <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Cluj-Napoca, Romania</p>
+                    <a href="mailto:balogferencz.artist@gmail.com" class="direct-email"><i class="fa-solid fa-envelope"></i> balogferencz.artist@gmail.com</a>
                 </div>
             </section>
 
@@ -181,19 +110,11 @@
     </div>
 
     <script>
-        function toggleAudio(audioId, btn) {
-            const audio = document.getElementById(audioId);
-            const icon = btn.querySelector('i');
-            
-            if (audio.paused) {
-                audio.play();
-                icon.className = 'fa-solid fa-pause';
-                btn.classList.add('playing');
-            } else {
-                audio.pause();
-                icon.className = 'fa-solid fa-play';
-                btn.classList.remove('playing');
-            }
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const btnIcon = document.querySelector('.mobile-menu-btn i');
+            sidebar.classList.toggle('active');
+            btnIcon.className = sidebar.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
         }
     </script>
 </body>
