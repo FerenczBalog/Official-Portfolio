@@ -143,6 +143,35 @@
                 if (window.innerWidth <= 768) toggleSidebar();
             });
         });
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const btnIcon = document.querySelector('.mobile-menu-btn i');
+    const body = document.body;
+    
+    sidebar.classList.toggle('active');
+    
+    // Ikon váltása
+    if(sidebar.classList.contains('active')) {
+        btnIcon.className = 'fa-solid fa-xmark';
+        body.style.overflow = 'hidden'; // Háttér görgetés tiltása
+    } else {
+        btnIcon.className = 'fa-solid fa-bars';
+        body.style.overflow = 'auto'; // Háttér görgetés engedélyezése
+    }
+}
+
+// Ha a sidebar-on belül linkre kattintunk, záródjon be és oldja fel a görgetést
+document.querySelectorAll('.sidebar-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        const sidebar = document.querySelector('.sidebar');
+        const btnIcon = document.querySelector('.mobile-menu-btn i');
+        
+        sidebar.classList.remove('active');
+        btnIcon.className = 'fa-solid fa-bars';
+        document.body.style.overflow = 'auto';
+    });
+});
+
     </script>
 </body>
 </html>
