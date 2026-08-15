@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balog Ferencz — Creative Portfolio</title>
+    <title>Balog Ferencz — Official Website</title>
 
-    <!-- Google Fonts & FontAwesome -->
+    <meta name="description" content="Official Portfolio of Ferencz Balog. Full-Stack Web Development & Commercial Cinematography based in Cluj-Napoca.">
+    <meta property="og:title" content="Balog Ferencz — Creative & Developer Portfolio">
+    <meta property="og:image" content="/img/Logo-general.png">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Balog Ferencz - Creative Portfolio" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <link rel="stylesheet" href="/ResetCss.css">
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
 
+    <!-- HEADER -->
     <header class="landing-header">
-        <div class="logo-wrapper">
-            <img src="/img/Logo-general.png" alt="Balog Ferencz" class="main-logo">
-        </div>
+        <img src="/img/Logo-general.png" alt="Balog Ferencz Logo" class="main-logo">
         <p class="tagline">Visual • Digital Development</p>
     </header>
 
+    <!-- EXPERTISE CONTAINER (2 CARDS) -->
     <main class="expertise-container two-cards">
-
-        <!-- Director of Photography -->
+        
+        <!-- 01. DoP Card -->
         <a href="/expertise/director_of_photography/dirOfPhotography.html" class="expertise-card dop">
             <div class="glow-effect"></div>
             <div class="card-top">
@@ -41,15 +40,15 @@
             </div>
             <div class="card-bottom">
                 <h2>Director of Photography</h2>
-                <p>Videography, Photography & Aerial drone.</p>
+                <p>Cinematography, Narrative Shorts, Commercial Product Photography & Event Coverage.</p>
                 <div class="card-action">
                     <span>Explore Work</span>
-                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
         </a>
 
-        <!-- Web Developer -->
+        <!-- 02. Web Dev Card -->
         <a href="/expertise/web_developer/webDeveloper.html" class="expertise-card dev">
             <div class="glow-effect"></div>
             <div class="card-top">
@@ -58,18 +57,43 @@
             </div>
             <div class="card-bottom">
                 <h2>Web Developer</h2>
-                <p>Full-stack web applications, custom platforms & UI/UX.</p>
+                <p>Full-Stack Web Applications, React, Node.js, Serverless Systems & Custom Portals.</p>
                 <div class="card-action">
                     <span>Explore Work</span>
-                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
         </a>
 
+        <!-- 03. Sound Engineer Card (REJTVE)
+        <a href="/expertise/sound_engineering/soundEngineering.html" class="expertise-card sound" style="display: none;">
+            <div class="glow-effect"></div>
+            <div class="card-top">
+                <span class="card-num">03</span>
+                <div class="icon-box"><i class="fa-solid fa-headphones"></i></div>
+            </div>
+            <div class="card-bottom">
+                <h2>Sound Engineer</h2>
+                <p>Audio Post-Production, Foley, Dialogue Editing, Mixing & Sound Design for Film.</p>
+                <div class="card-action">
+                    <span>Explore Work</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </a>
+        -->
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="landing-footer">
-        <p>© 2026 Balog Ferencz. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA</a>
+            <a href="https://github.com/ferenczbalog" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://gurushots.com/balogferencz.artist" target="_blank"><i class="fa-solid fa-camera"></i> GuruShots</a>
+            <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </div>
+        <p class="copyright">© 2026 Balog Ferencz • All rights reserved.</p>
     </footer>
 
 </body>
