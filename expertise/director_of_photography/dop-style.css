@@ -109,6 +109,56 @@ html {
     color: #555555;
 }
 
+/* HAMBURGER GOMB */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    background: #121318;
+    color: #ffffff;
+    border: 1px solid #232530;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* MOBIL NÉZET (768px ALATT) */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        background-color: #0a0a0c;
+        border-right: 1px solid #232530;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        width: 100%;
+        padding-top: 80px;
+    }
+}
+
+
 /* MAIN CONTENT */
 .main-content {
     margin-left: 320px;
