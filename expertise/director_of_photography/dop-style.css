@@ -18,7 +18,7 @@ html {
     min-height: 100vh;
 }
 
-/* SIDEBAR */
+/* SIDEBAR DESKTOP */
 .sidebar {
     width: 320px;
     height: 100vh;
@@ -207,33 +207,39 @@ html {
     font-weight: 600;
 }
 
-/* VIDEO SLIDER (CINEMATOGRAPHY SLIDESHOW) */
+/* VIDEO SLIDER (CINEMATOGRAPHY SLIDESHOW FIX) */
 .video-slider-container {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     background: #000000;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .video-slider-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    gap: 30px; /* Megfelelő távolság a kártyák között */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    transform: translateX(0px); /* Alaphelyzet fixálás */
 }
 
 .video-item.slide {
     min-width: 100%;
+    width: 100%;
     background: #121212;
     padding: 24px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .slider-arrow {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
     width: 44px;
@@ -252,8 +258,8 @@ html {
     color: #000000;
 }
 
-.slider-arrow.prev { left: 15px; }
-.slider-arrow.next { right: 15px; }
+.slider-arrow.prev { left: 10px; }
+.slider-arrow.next { right: 10px; }
 
 .slider-dots {
     display: flex;
@@ -302,6 +308,8 @@ html {
     text-transform: uppercase;
     color: #cccccc;
     font-family: 'Space Mono', monospace;
+    white-space: nowrap; /* CSOMAGOLÁS ÉS TÖRÉS ELLENI FIX */
+    display: inline-block;
 }
 
 .video-wrapper {
@@ -522,7 +530,7 @@ html {
 .modal-arrow.prev { left: 30px; }
 .modal-arrow.next { right: 30px; }
 
-/* GuruShots ikon méretezése és szürkítése */
+/* GURUSHOTS IKON */
 .socials a.gurushots-link {
     display: inline-flex;
     align-items: center;
@@ -530,37 +538,136 @@ html {
 }
 
 .socials .gurushots-icon {
-    width: 1.1em;             /* Pontosan akkora, mint a FontAwesome ikonok */
+    width: 1.1em;
     height: 1.1em;
     object-fit: contain;
     vertical-align: middle;
-    filter: opacity(0.6) grayscale(100%); /* Egységes szürke tónus alapértelmezetten */
+    filter: opacity(0.6) grayscale(100%);
     transition: filter 0.2s ease, transform 0.2s ease;
 }
 
-/* Hover effektus: Kivilágosodik / fehér lesz, ahogy a többi ikon is */
 .socials a.gurushots-link:hover .gurushots-icon {
     filter: opacity(1) brightness(2) grayscale(0%);
     transform: scale(1.1);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+/* REJTETT ELEMEK DESKTOPON */
+.mobile-top-header,
+.mobile-footer,
+.mobile-menu-btn {
+    display: none;
+}
+
+/* MOBIL RESPONSIVE (768px ALATT) */
+@media (max-width: 768px) {
+
+    /* HAMBURGER GOMB FIX */
+    .mobile-menu-btn {
+        display: flex;
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 3000;
+        background: #121318;
+        color: #ffffff;
+        border: 1px solid #232530;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    /* MODAL SIDEBAR (80% SZÉLES, 100VH MAGAS) */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        height: 100vh;
+        background-color: rgba(10, 10, 12, 0.98);
+        backdrop-filter: blur(12px);
+        border-right: 1px solid #232530;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.8);
+        z-index: 2500;
+        transform: translateX(-100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+        padding: 40px 20px;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
     .split-container {
         flex-direction: column;
     }
 
-    .sidebar {
+    .main-content {
+        margin-left: 0 !important;
+        padding: 20px 18px !important;
         width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .main-content {
-        margin-left: 0;
-        padding: 40px 20px;
+    .mobile-top-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 30px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-top-header .mobile-logo {
+        max-height: 48px;
+        width: auto;
+        margin-bottom: 8px;
+        filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.08));
+    }
+
+    .mobile-top-header .mobile-tagline {
+        font-family: 'Space Mono', monospace;
+        font-size: 0.7rem;
+        color: #666666;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .mobile-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 40px 0 20px 0;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        width: 100%;
+    }
+
+    .mobile-footer .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .mobile-footer .footer-links a {
+        color: #888888;
+        text-decoration: none;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .mobile-footer .copyright {
+        color: #444444;
+        font-size: 0.72rem;
     }
 
     .photo-grid-5 {

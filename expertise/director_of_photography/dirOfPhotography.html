@@ -11,8 +11,6 @@
     <meta property="og:description" content="Film Cinematography, Studio Product Photography & Corporate Event Coverage.">
     <meta property="og:image" content="/img/Logo-dirOfPhotography.png">
 
-    <link rel="icon" type="image/png" href="/img/Logo-dirOfPhotography.png">
-
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +27,11 @@
     <link rel="stylesheet" href="/expertise/director_of_photography/dop-style.css">
 </head>
 <body>
+
+    <!-- HAMBURGER GOMB MOBILHOZ -->
+    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
     <div class="split-container">
 
@@ -68,6 +71,12 @@
         <!-- GÖRGETHETŐ JOBB OLDAL (CONTENT) -->
         <main class="main-content">
 
+            <!-- MOBIL LOGÓ & HEADER (768px ALATT) -->
+            <div class="mobile-top-header">
+                <img src="/img/Logo-dirOfPhotography.png" alt="Balog Ferencz" class="mobile-logo">
+                <p class="mobile-tagline">Cinematography & Visual Works</p>
+            </div>
+
             <!-- 01. SHOWREEL -->
             <section id="Showreel" class="content-block">
                 <div class="block-title">
@@ -100,7 +109,7 @@
                 </div>
 
                 <div class="video-slider-container">
-                    <button class="slider-arrow prev" onclick="moveVideoSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slider-arrow prev" onclick="moveVideoSlide(-1)" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
                     
                     <div class="video-slider-track" id="videoSliderTrack">
                         <!-- Video 1 -->
@@ -171,7 +180,7 @@
                         </div>
                     </div>
 
-                    <button class="slider-arrow next" onclick="moveVideoSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                    <button class="slider-arrow next" onclick="moveVideoSlide(1)" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
 
                     <!-- Slider Indikátor Pontok -->
                     <div class="slider-dots" id="sliderDots">
@@ -245,6 +254,17 @@
                 </div>
             </section>
 
+            <!-- MOBIL LÁBLÉC (768px ALATT) -->
+            <footer class="mobile-footer">
+                <div class="footer-links">
+                    <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA</a>
+                    <a href="https://github.com/ferenczbalog" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://gurushots.com/balogferencz.artist" target="_blank"><i class="fa-solid fa-camera"></i> GuruShots</a>
+                    <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+                </div>
+                <p class="copyright">© 2026 Balog Ferencz • All rights reserved.</p>
+            </footer>
+
         </main>
     </div>
 
@@ -262,16 +282,40 @@
     <!-- IMAGE LIGHTBOX MODAL (FOTÓ NÉZEGETŐ) -->
     <div id="imageModal" class="modal img-modal" onclick="closeImageModal(event)">
         <span class="close-btn" onclick="closeImageModal(event)">&times;</span>
-        <button class="modal-arrow prev" onclick="changeImage(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="modal-arrow prev" onclick="changeImage(-1)" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
         <div class="img-modal-content">
             <img id="modalImage" src="" alt="Full Resolution Photo">
             <p id="modalImageCaption" class="img-caption"></p>
         </div>
-        <button class="modal-arrow next" onclick="changeImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="modal-arrow next" onclick="changeImage(1)" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 
-    <!-- JAVASCRIPT: SLIDER & MODALS -->
+    <!-- JAVASCRIPT: SIDEBAR TOGGLE, SLIDER & MODALS -->
     <script>
+        // --- 0. MOBIL SIDEBAR TOGGLE ---
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const btnIcon = document.querySelector('.mobile-menu-btn i');
+            
+            sidebar.classList.toggle('active');
+            
+            if (sidebar.classList.contains('active')) {
+                btnIcon.className = 'fa-solid fa-xmark';
+                document.body.style.overflow = 'hidden';
+            } else {
+                btnIcon.className = 'fa-solid fa-bars';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    toggleSidebar();
+                }
+            });
+        });
+
         // --- 1. VIDEÓ SLIDER ---
         let currentSlide = 0;
         const slides = document.querySelectorAll('.video-item.slide');
@@ -279,7 +323,8 @@
 
         function updateSlider() {
             const track = document.getElementById('videoSliderTrack');
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            // Kiszámoljuk a 30px-es gap hézagot is az eltolásnál
+            track.style.transform = `translateX(calc(-${currentSlide * 100}% - ${currentSlide * 30}px))`;
             
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
@@ -305,6 +350,7 @@
             video.src = videoSrc;
             modalTitle.textContent = title || 'Cinematography Showcase';
             modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeVideoModal(event) {
@@ -314,6 +360,7 @@
                 modal.classList.remove('active');
                 video.pause();
                 video.src = '';
+                document.body.style.overflow = 'auto';
             }
         }
 
@@ -352,6 +399,7 @@
             const modal = document.getElementById('imageModal');
             updateModalImage();
             modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
             
             document.addEventListener('keydown', handleKeyPress);
         }
@@ -375,6 +423,7 @@
             if (event.target.id === 'imageModal' || event.target.className === 'close-btn') {
                 const modal = document.getElementById('imageModal');
                 modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
                 document.removeEventListener('keydown', handleKeyPress);
             }
         }
@@ -383,7 +432,9 @@
             if (e.key === 'ArrowLeft') changeImage(-1);
             if (e.key === 'ArrowRight') changeImage(1);
             if (e.key === 'Escape') {
-                document.getElementById('imageModal').classList.remove('active');
+                const modal = document.getElementById('imageModal');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
                 document.removeEventListener('keydown', handleKeyPress);
             }
         }
