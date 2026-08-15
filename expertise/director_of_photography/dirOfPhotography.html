@@ -87,97 +87,301 @@
                 </div>
             </section>
 
-            <!-- 02. CINEMATOGRAPHY -->
+         
+                   <!-- 02. CINEMATOGRAPHY / SLIDESHOW VIDEÓKKAL -->
             <section id="Videography" class="content-block">
                 <div class="block-title">
-                    <h2>02. Narrative & Commercial Projects</h2>
+                    <h2>02. Narrative & Commercial Cinematography</h2>
                 </div>
-                
-                <div class="project-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="video-container">
-                            <video controls poster="/expertise/director_of_photography/img/A_verem-Balog_Ferencz.png">
-                                <source src="/expertise/director_of_photography/video/A_Verem_-_Balog_Ferencz.webm" type="video/webm">
-                            </video>
-                        </div>
-                        <div class="project-header">
-                            <div>
-                                <h3>A Verem</h3>
-                                <p class="project-subtitle">Noir Stop-Motion Short Film</p>
+
+                <div class="video-slider-container">
+                    <button class="slider-arrow prev" onclick="moveVideoSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    
+                    <div class="video-slider-track" id="videoSliderTrack">
+                        <!-- Video 1 -->
+                        <div class="video-item slide">
+                            <div class="video-header">
+                                <div>
+                                    <h3>A Verem</h3>
+                                    <p class="project-subtitle">Noir Stop-Motion - Puppet Animation & Precision Lighting</p>
+                                </div>
+                                <span class="badge">Stop-Motion</span>
                             </div>
-                            <span class="badge dop-badge">Stop-Motion</span>
+                            <div class="video-wrapper" onclick="openVideoModal('/expertise/director_of_photography/video/A_Verem_-_Balog_Ferencz.webm', 'A Verem — Noir Stop-Motion')">
+                                <video poster="/expertise/director_of_photography/img/A_verem-Balog_Ferencz.png" muted loop playsinline class="preview-thumb">
+                                    <source src="/expertise/director_of_photography/video/A_Verem_-_Balog_Ferencz.webm" type="video/webm">
+                                </video>
+                                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <div class="tech-specs">
+                                <span>CAM: Canon EOS 700D</span>
+                                <span>LENS: 18-55mm</span>
+                                <span>RATIO: 16:9</span>
+                            </div>
                         </div>
-                        <p class="project-desc">Puppet fabrication, set lighting design, atmospheric stage control, and frame interpolation.</p>
+
+                        <!-- Video 2 -->
+                        <div class="video-item slide">
+                            <div class="video-header">
+                                <div>
+                                    <h3>Remake - Le Samourai intro</h3>
+                                    <p class="project-subtitle">Movie remake</p>
+                                </div>
+                                <span class="badge">Movie remake</span>
+                            </div>
+                            <div class="video-wrapper" onclick="openVideoModal('/expertise/director_of_photography/video/Le_Samourai_-_Remake_-_Balog_Ferencz.webm', 'Remake - Le Samourai intro')">
+                                <video poster="/expertise/director_of_photography/img/Le_Samourai_-Balog_Ferencz.png" muted loop playsinline class="preview-thumb">
+                                    <source src="/expertise/director_of_photography/video/Le_Samourai_-_Remake_-_Balog_Ferencz.webm" type="video/webm">
+                                </video>
+                                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <div class="tech-specs">
+                                <span>CAM: Canon EOS 700D</span>
+                                <span>LENS: 18-55mm</span>
+                                <span>LIGHTING: Natural Low Light</span>
+                                <span>RATIO: 16:9</span>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="video-item slide">
+                            <div class="video-header">
+                                <div>
+                                    <h3>I don't hear, but I feel...</h3>
+                                    <p class="project-subtitle">Documentary short - teaser</p>
+                                </div>
+                                <span class="badge">Documentary</span>
+                            </div>
+                            <div class="video-wrapper" onclick="openVideoModal('/expertise/director_of_photography/video/Documentary_-_Balog_Ferencz.webm', 'I don\'t hear, but I feel...')">
+                                <video poster="/expertise/director_of_photography/img/Documentary.png" muted loop playsinline class="preview-thumb">
+                                    <source src="/expertise/director_of_photography/video/Documentary_-_Balog_Ferencz.webm" type="video/webm">
+                                </video>
+                                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <div class="tech-specs">
+                                <span>CAM: Canon EOS 700D</span>
+                                <span>LENS: 18-55mm</span>
+                                <span>RATIO: 16:9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-arrow next" onclick="moveVideoSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+                    <!-- Slider Indikátor Pontok -->
+                    <div class="slider-dots" id="sliderDots">
+                        <span class="dot active" onclick="setVideoSlide(0)"></span>
+                        <span class="dot" onclick="setVideoSlide(1)"></span>
+                        <span class="dot" onclick="setVideoSlide(2)"></span>
                     </div>
                 </div>
             </section>
 
-            <!-- 03. PHOTOGRAPHY -->
-            <section id="Photography" class="content-block">
+            <!-- 03. ESEMÉNYFOTÓZÁS (4 KATEGÓRIA) -->
+            <section id="EventPhotography" class="content-block">
                 <div class="block-title">
-                    <h2>03. Commercial & Event Photography</h2>
+                    <h2>03. Event & Corporate Photography</h2>
                 </div>
-                <p class="section-text" style="margin-bottom: 20px;">High-resolution event coverage, corporate keynotes, and product shoots.</p>
-                
-                <div class="photo-gallery">
-                    <div class="photo-item">
-                        <img src="/expertise/director_of_photography/img/eventPhoto/CorpNkey/1.webp" alt="Corporate Event" onerror="this.src='/img/Logo-general.png'">
-                        <div class="photo-caption">Corporate & Keynotes</div>
+                <p class="section-intro">Comprehensive visual documentation for corporate summits, cultural festivals, live stage performances, and exclusive networking galas. Select any category to view the full showcase.</p>
+
+                <div class="photo-grid-5">
+                    
+                    <!-- 1. Corporate & Keynotes (5 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'corporate')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/CorpNkey/1.webp" alt="Corporate Keynote Conference">
+                        <div class="photo-info">
+                            <h4>Corporate & Keynotes</h4>
+                            <span class="tech-tag">5 Photos • Conferences & Talks</span>
+                        </div>
                     </div>
+
+                    <!-- 2. Cultural & Stage (4 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'stage')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/CultNstage/1.webp" alt="Live Stage Performance">
+                        <div class="photo-info">
+                            <h4>Cultural & Stage</h4>
+                            <span class="tech-tag">4 Photos • Festivals & Stage</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Backstage & BTS (2 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'bts')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/Backstage/1.webp" alt="Backstage Documentary">
+                        <div class="photo-info">
+                            <h4>Backstage & BTS</h4>
+                            <span class="tech-tag">2 Photos • Behind The Scenes</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Networking & Galas (2 Photos) -->
+                    <div class="photo-card" onclick="openImageModal(0, 'networking')">
+                        <img src="/expertise/director_of_photography/img/eventPhoto/Networking/1.webp" alt="Networking Event Gala">
+                        <div class="photo-info">
+                            <h4>Networking & Galas</h4>
+                            <span class="tech-tag">2 Photos • Receptions & VIP</span>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
-            <!-- 04. CONTACT -->
+            <!-- 04. CONTACT & QUOTE -->
             <section id="Contact" class="content-block contact-block">
                 <div class="block-title">
                     <h2>04. Contact & Booking</h2>
                 </div>
-                <p class="section-text">Available for commercial projects, film shoots, and event coverage.</p>
+                <p>Available for commercial projects, product shoots, and event coverage.</p>
+                <div class="quote-notice">
+                    <p><i class="fa-solid fa-circle-info"></i> For event or video coverage quotes, please include the date, location, and total deliverables needed.</p>
+                </div>
                 <div class="contact-actions">
                     <a href="mailto:balogferencz.artist@gmail.com" class="direct-email"><i class="fa-solid fa-envelope"></i> balogferencz.artist@gmail.com</a>
                     <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Cluj-Napoca, Romania</p>
                 </div>
             </section>
 
-            <!-- MOBIL LÁBLÉC -->
-            <footer class="mobile-footer">
-                <div class="footer-links">
-                    <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA</a>
-                    <a href="https://github.com/ferenczbalog" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="https://gurushots.com/balogferencz.artist" target="_blank"><i class="fa-solid fa-camera"></i> GuruShots</a>
-                    <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
-                </div>
-                <p class="copyright">© 2026 Balog Ferencz • All rights reserved.</p>
-            </footer>
-
         </main>
     </div>
 
-    <!-- JAVASCRIPT -->
+    <!-- VIDEO MODAL -->
+    <div id="videoModal" class="modal" onclick="closeVideoModal(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideoModal(event)">&times;</span>
+            <h3 id="modalTitle">Project Title</h3>
+            <div class="modal-video-container">
+                <video id="modalVideo" controls autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE LIGHTBOX MODAL (FOTÓ NÉZEGETŐ) -->
+    <div id="imageModal" class="modal img-modal" onclick="closeImageModal(event)">
+        <span class="close-btn" onclick="closeImageModal(event)">&times;</span>
+        <button class="modal-arrow prev" onclick="changeImage(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="img-modal-content">
+            <img id="modalImage" src="" alt="Full Resolution Photo">
+            <p id="modalImageCaption" class="img-caption"></p>
+        </div>
+        <button class="modal-arrow next" onclick="changeImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- JAVASCRIPT: SLIDER & MODALS -->
     <script>
-        function toggleSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            const btnIcon = document.querySelector('.mobile-menu-btn i');
+        // --- 1. VIDEÓ SLIDER ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.video-item.slide');
+        const dots = document.querySelectorAll('.slider-dots .dot');
+
+        function updateSlider() {
+            const track = document.getElementById('videoSliderTrack');
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            sidebar.classList.toggle('active');
-            
-            if (sidebar.classList.contains('active')) {
-                btnIcon.className = 'fa-solid fa-xmark';
-                document.body.style.overflow = 'hidden';
-            } else {
-                btnIcon.className = 'fa-solid fa-bars';
-                document.body.style.overflow = 'auto';
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function moveVideoSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function setVideoSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        // --- 2. VIDEÓ MODAL ---
+        function openVideoModal(videoSrc, title) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            const modalTitle = document.getElementById('modalTitle');
+
+            video.src = videoSrc;
+            modalTitle.textContent = title || 'Cinematography Showcase';
+            modal.classList.add('active');
+        }
+
+        function closeVideoModal(event) {
+            if (event.target.id === 'videoModal' || event.target.className === 'close-btn') {
+                const modal = document.getElementById('videoModal');
+                const video = document.getElementById('modalVideo');
+                modal.classList.remove('active');
+                video.pause();
+                video.src = '';
             }
         }
 
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    toggleSidebar();
-                }
-            });
-        });
+        // --- 3. FOTÓ LIGHTBOX GALÉRIA ---
+        const photoGalleries = {
+            corporate: [
+                { src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/1.webp", caption: "Corporate & Keynotes — Candid Interaction during an Executive Roundtable Session" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/2.webp", caption: "Corporate & Keynotes — Professional Dialogue & Informal Networking Reception" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/3.webp", caption: "Corporate & Keynotes — Keynote Hall Overview & Stage Atmosphere" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/4.webp", caption: "Corporate & Keynotes — Audience Immersion & Live Presentation Reactions" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/CorpNkey/5.webp", caption: "Corporate & Keynotes — Keynote Speaker Addressing the Conference" }
+            ],
+            stage: [
+                { src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/1.webp", caption: "Cultural & Stage — Detailed Stage Character Focus & Dynamic Color Rendering" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/2.webp", caption: "Cultural & Stage — Atmospheric Low-Light Scene & Dramatic Blue Key Light" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/3.webp", caption: "Cultural & Stage — Precision Spot Lighting & Puppet Character Detail" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/CultNstage/4.webp", caption: "Cultural & Stage — Live Puppetry Performance & On-Stage Artist Interaction" }
+            ],
+            bts: [
+                { src: "/expertise/director_of_photography/img/eventPhoto/Backstage/1.webp", caption: "Backstage & BTS — Crew Collaboration & Team Camaraderie Behind the Scenes" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/Backstage/2.webp", caption: "Backstage & BTS — On-Set Production Workflow & Live Character Preparation" }
+            ],
+            networking: [
+                { src: "/expertise/director_of_photography/img/eventPhoto/Networking/1.webp", caption: "Networking & Galas — Candid Engagement & Active Listening During Social Dialogue" },
+                { src: "/expertise/director_of_photography/img/eventPhoto/Networking/2.webp", caption: "Networking & Galas — Group Connections & Warm Evening Reception Ambiance" }
+            ]
+        };
+
+        let currentCategory = 'corporate';
+        let currentImgIndex = 0;
+
+        function openImageModal(index, category) {
+            currentCategory = category;
+            currentImgIndex = index;
+            
+            const modal = document.getElementById('imageModal');
+            updateModalImage();
+            modal.classList.add('active');
+            
+            document.addEventListener('keydown', handleKeyPress);
+        }
+
+        function updateModalImage() {
+            const imgData = photoGalleries[currentCategory][currentImgIndex];
+            if (imgData) {
+                document.getElementById('modalImage').src = imgData.src;
+                document.getElementById('modalImageCaption').textContent = imgData.caption;
+            }
+        }
+
+        function changeImage(direction) {
+            const list = photoGalleries[currentCategory];
+            if (!list || list.length === 0) return;
+            currentImgIndex = (currentImgIndex + direction + list.length) % list.length;
+            updateModalImage();
+        }
+
+        function closeImageModal(event) {
+            if (event.target.id === 'imageModal' || event.target.className === 'close-btn') {
+                const modal = document.getElementById('imageModal');
+                modal.classList.remove('active');
+                document.removeEventListener('keydown', handleKeyPress);
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'ArrowRight') changeImage(1);
+            if (e.key === 'Escape') {
+                document.getElementById('imageModal').classList.remove('active');
+                document.removeEventListener('keydown', handleKeyPress);
+            }
+        }
     </script>
 </body>
 </html>
