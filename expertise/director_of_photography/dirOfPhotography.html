@@ -44,7 +44,7 @@
                 <nav class="sidebar-nav">
                     <a href="#Showreel"><i class="fa-solid fa-play"></i> Showreel</a>
                     <a href="#Videography"><i class="fa-solid fa-film"></i> Cinematography</a>
-                    <a href="#Photography"><i class="fa-solid fa-camera"></i> Photography</a>
+                    <a href="#EventPhotography"><i class="fa-solid fa-camera"></i> Photography</a>
                     <a href="#Contact"><i class="fa-solid fa-paper-plane"></i> Contact & Quote</a>
                 </nav>
 
@@ -87,8 +87,7 @@
                 </div>
             </section>
 
-         
-                   <!-- 02. CINEMATOGRAPHY / SLIDESHOW VIDEÓKKAL -->
+            <!-- 02. CINEMATOGRAPHY / SLIDESHOW VIDEÓKKAL -->
             <section id="Videography" class="content-block">
                 <div class="block-title">
                     <h2>02. Narrative & Commercial Cinematography</h2>
@@ -240,6 +239,17 @@
                 </div>
             </section>
 
+            <!-- MOBIL LÁBLÉC -->
+            <footer class="mobile-footer">
+                <div class="footer-links">
+                    <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA</a>
+                    <a href="https://github.com/ferenczbalog" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://gurushots.com/balogferencz.artist" target="_blank"><i class="fa-solid fa-camera"></i> GuruShots</a>
+                    <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+                </div>
+                <p class="copyright">© 2026 Balog Ferencz • All rights reserved.</p>
+            </footer>
+
         </main>
     </div>
 
@@ -265,8 +275,32 @@
         <button class="modal-arrow next" onclick="changeImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 
-    <!-- JAVASCRIPT: SLIDER & MODALS -->
+    <!-- JAVASCRIPT: TOGGLE SIDEBAR, SLIDER & MODALS -->
     <script>
+        // --- 0. MOBIL SIDEBAR TOGGLE (EZ HIÁNYZOTT!) ---
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const btnIcon = document.querySelector('.mobile-menu-btn i');
+            
+            sidebar.classList.toggle('active');
+            
+            if (sidebar.classList.contains('active')) {
+                btnIcon.className = 'fa-solid fa-xmark';
+                document.body.style.overflow = 'hidden';
+            } else {
+                btnIcon.className = 'fa-solid fa-bars';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    toggleSidebar();
+                }
+            });
+        });
+
         // --- 1. VIDEÓ SLIDER ---
         let currentSlide = 0;
         const slides = document.querySelectorAll('.video-item.slide');
@@ -347,8 +381,6 @@
             const modal = document.getElementById('imageModal');
             updateModalImage();
             modal.classList.add('active');
-            
-            document.addEventListener('keydown', handleKeyPress);
         }
 
         function updateModalImage() {
@@ -370,16 +402,6 @@
             if (event.target.id === 'imageModal' || event.target.className === 'close-btn') {
                 const modal = document.getElementById('imageModal');
                 modal.classList.remove('active');
-                document.removeEventListener('keydown', handleKeyPress);
-            }
-        }
-
-        function handleKeyPress(e) {
-            if (e.key === 'ArrowLeft') changeImage(-1);
-            if (e.key === 'ArrowRight') changeImage(1);
-            if (e.key === 'Escape') {
-                document.getElementById('imageModal').classList.remove('active');
-                document.removeEventListener('keydown', handleKeyPress);
             }
         }
     </script>
