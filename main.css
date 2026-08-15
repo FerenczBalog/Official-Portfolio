@@ -25,7 +25,7 @@ body {
 }
 
 .main-logo {
-    max-height: 55px; /* Kisebb logó */
+    max-height: 55px;
     width: auto;
     margin-bottom: 10px;
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.08));
@@ -39,27 +39,27 @@ body {
     letter-spacing: 2.5px;
 }
 
-/* CONTAINER — Szűkített maximális szélesség */
+/* CONTAINER */
 .expertise-container {
     display: flex;
-    gap: 18px; /* Kisebb hézag a kártyák között */
-    max-width: 980px; /* 1250px-ről csökkentve */
+    gap: 18px;
+    max-width: 980px;
     width: 100%;
     margin: 0 auto;
     flex: 1;
-    align-items: center; /* Középre igazítás függőlegesen */
+    align-items: center;
     justify-content: center;
 }
 
-/* CARDS BASE — Visszafogottabb méretezés */
+/* CARDS BASE */
 .expertise-card {
     flex: 1;
     position: relative;
     background: #0f0f0f;
     border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 12px;
-    padding: 24px 22px; /* Csökkentett belső margó (40px-ről 24px-re) */
-    min-height: 280px;  /* Fix, visszafogottabb magasság */
+    padding: 24px 22px;
+    min-height: 280px;
     max-height: 320px;
     text-decoration: none;
     color: #ffffff;
@@ -84,15 +84,15 @@ body {
 }
 
 .sound .glow-effect {
-    background: radial-gradient(circle at 50% 0%, rgba(255, 120, 0, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 0%, rgba(255, 120, 0, 0.15) 0%, transparent 70%);
 }
 
 .dop .glow-effect {
-    background: radial-gradient(circle at 50% 0%, rgba(0, 150, 255, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 0%, rgba(0, 150, 255, 0.15) 0%, transparent 70%);
 }
 
 .dev .glow-effect {
-    background: radial-gradient(circle at 50% 0%, rgba(0, 255, 150, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 0%, rgba(0, 255, 150, 0.15) 0%, transparent 70%);
 }
 
 /* CARD TOP */
@@ -112,7 +112,7 @@ body {
 }
 
 .icon-box {
-    font-size: 1.3rem; /* Kisebb ikonok */
+    font-size: 1.3rem;
     color: #666666;
     transition: all 0.4s ease;
 }
@@ -124,7 +124,7 @@ body {
 }
 
 .expertise-card h2 {
-    font-size: 1.25rem; /* Visszafogottabb címsor */
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 8px;
     letter-spacing: -0.3px;
@@ -132,7 +132,7 @@ body {
 }
 
 .expertise-card p {
-    font-size: 0.82rem; /* Finomabb leíró szöveg */
+    font-size: 0.82rem;
     color: #888888;
     line-height: 1.5;
     margin-bottom: 18px;
@@ -159,7 +159,7 @@ body {
 
 /* INTERACTIVE HOVER STATES */
 .expertise-card:hover {
-    flex: 1.12; /* Finomabb tágulási effekt (1.25 helyett) */
+    flex: 1.12;
     border-color: rgba(255, 255, 255, 0.22);
     background: #131313;
     transform: translateY(-4px);
@@ -191,30 +191,39 @@ body {
     transform: translateX(5px);
 }
 
-/* CONTAINER & CARDS ADJUSTMENT FOR 2 CARDS */
-.expertise-container.two-cards {
-    max-width: 720px; /* Szűkebb keret, hogy a 2 kártya ne nyúljon el túlságosan */
-}
-
-.expertise-container.two-cards .expertise-card {
-    max-width: 340px;
-}
-
-@media (max-width: 768px) {
-    .expertise-container.two-cards {
-        max-width: 400px;
-    }
-    .expertise-container.two-cards .expertise-card {
-        max-width: 100%;
-    }
-}
-
-/* FOOTER */
+/* FOOTER STYLING */
 .landing-footer {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 25px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.copyright {
     color: #333333;
     font-size: 0.75rem;
-    padding-top: 20px;
 }
 
 /* MOBIL NÉZET */
