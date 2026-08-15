@@ -21,6 +21,7 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .split-container {
@@ -28,7 +29,9 @@ body {
     min-height: 100vh;
 }
 
-/* DESKTOP SIDEBAR */
+/* ==========================================
+   DESKTOP SIDEBAR
+   ========================================== */
 .sidebar {
     width: 300px;
     height: 100vh;
@@ -108,7 +111,9 @@ body {
     font-size: 0.75rem;
 }
 
-/* DESKTOP MAIN CONTENT */
+/* ==========================================
+   MAIN CONTENT & SECTIONS
+   ========================================== */
 .main-content {
     margin-left: 300px;
     flex: 1;
@@ -127,13 +132,19 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-/* REEL & PROJECT CARDS */
-.reel-card, .project-card {
+.section-intro, .section-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 01. SHOWREEL */
+.reel-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px;
-    margin-bottom: 24px;
 }
 
 .video-container {
@@ -147,24 +158,57 @@ body {
 .video-container video {
     width: 100%;
     display: block;
-    max-height: 500px;
+    max-height: 520px;
 }
 
-.reel-card h3, .project-header h3 {
+.reel-card h3 {
     font-size: 1.2rem;
     margin-bottom: 6px;
 }
 
-.project-header {
+.reel-desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   02. CINEMATOGRAPHY VIDEO SLIDER
+   ========================================== */
+.video-slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+}
+
+.video-slider-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+}
+
+.video-item.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.video-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.video-header h3 {
+    font-size: 1.25rem;
 }
 
 .project-subtitle {
     color: var(--text-muted);
     font-size: 0.85rem;
+    margin-top: 2px;
 }
 
 .badge {
@@ -176,40 +220,174 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-.reel-desc, .project-desc, .section-text {
-    color: #cccccc;
-    font-size: 0.9rem;
-    line-height: 1.6;
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
 }
 
-/* PHOTO GALLERY */
-.photo-gallery {
+.preview-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.video-wrapper:hover .preview-thumb {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.video-wrapper:hover .play-overlay {
+    background: var(--accent-gold);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.tech-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.tech-specs span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* SLIDER CONTROLS */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(15, 16, 21, 0.85);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.slider-arrow:hover {
+    border-color: var(--accent-gold);
+    background: var(--accent-gold);
+}
+
+.slider-arrow.prev { left: 15px; }
+.slider-arrow.next { right: 15px; }
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.slider-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: background 0.3s ease, width 0.3s ease;
+}
+
+.slider-dots .dot.active {
+    background: var(--accent-gold);
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* ==========================================
+   03. EVENT PHOTOGRAPHY GRID
+   ========================================== */
+.photo-grid-5 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
-.photo-item {
+.photo-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.photo-item img {
+.photo-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-gold);
+}
+
+.photo-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
 }
 
-.photo-caption {
-    padding: 12px 15px;
-    font-size: 0.85rem;
+.photo-info {
+    padding: 16px;
+}
+
+.photo-info h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.photo-info .tech-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
     color: var(--text-muted);
 }
 
-/* CONTACT */
+/* 04. CONTACT */
+.quote-notice {
+    background: rgba(217, 119, 6, 0.08);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--text-main);
+}
+
 .direct-email {
     display: inline-flex;
     align-items: center;
@@ -218,7 +396,6 @@ body {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 600;
-    margin-top: 15px;
 }
 
 .location-tag {
@@ -226,6 +403,119 @@ body {
     font-size: 0.85rem;
     margin-top: 10px;
 }
+
+/* ==========================================
+   MODAL LIGHTBOXES (VIDEO & IMAGE)
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 4000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.modal-video-container {
+    width: 100%;
+    max-height: 70vh;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
+
+.modal-video-container video {
+    width: 100%;
+    max-height: 70vh;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    color: var(--accent-gold);
+}
+
+/* IMAGE LIGHTBOX MODAL SPECIFIC */
+.img-modal-content {
+    max-width: 85vw;
+    max-height: 80vh;
+    text-align: center;
+}
+
+.img-modal-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.img-caption {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: 'Space Mono', monospace;
+}
+
+.modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 16, 21, 0.8);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.modal-arrow:hover {
+    border-color: var(--accent-gold);
+    background: var(--accent-gold);
+}
+
+.modal-arrow.prev { left: 25px; }
+.modal-arrow.next { right: 25px; }
 
 /* HIDE MOBILE ELEMENTS ON DESKTOP */
 .mobile-top-header,
@@ -258,6 +548,7 @@ body {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     }
 
+    /* MODAL SIDEBAR (80% WIDTH, 100VH HEIGHT) */
     .sidebar {
         position: fixed;
         top: 0;
@@ -345,4 +636,21 @@ body {
         color: #444444;
         font-size: 0.72rem;
     }
+
+    .video-wrapper {
+        height: 230px;
+    }
+
+    .video-slider-container {
+        padding: 18px;
+    }
+
+    .modal-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+
+    .modal-arrow.prev { left: 8px; }
+    .modal-arrow.next { right: 8px; }
 }
