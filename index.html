@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balog Ferencz — Official Website</title>
 
-    <meta name="description" content="Official Portfolio of Ferencz Balog. Full-Stack Web Development & Commercial Cinematography based in Cluj-Napoca.">
-    <meta property="og:title" content="Balog Ferencz — Web Developer & DoP">
+    <meta name="description" content="Official Portfolio of Ferencz Balog. Full-Stack Web Development, Audio Engineering & Commercial Cinematography based in Cluj-Napoca.">
+    <meta property="og:title" content="Balog Ferencz — Creative & Developer Portfolio">
     <meta property="og:image" content="/img/Logo-general.png">
 
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
@@ -22,49 +22,78 @@
 </head>
 <body>
 
-    <main class="hub-container">
+    <!-- HEADER -->
+    <header class="landing-header">
+        <img src="/img/Logo-general.png" alt="Balog Ferencz Logo" class="main-logo">
+        <p class="tagline">Visual • Audio • Digital Development</p>
+    </header>
+
+    <!-- EXPERTISE CONTAINER (3 CARDS) -->
+    <main class="expertise-container">
         
-        <header class="hub-header">
-            <img src="/img/Logo-general.png" alt="Balog Ferencz Logo" class="hub-logo">
-            <h1>Balog Ferencz</h1>
-            <p class="hub-tagline">Visual • Digital Development</p>
-        </header>
-
-        <section class="expertise-grid">
-            
-            <!-- DoP Card -->
-            <a href="/expertise/director_of_photography/dirOfPhotography.html" class="expertise-card dop-card">
-                <div class="card-content">
-                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
-                    <h2>Director of Photography</h2>
-                    <p>Cinematography, Narrative Shorts, Commercial Product Photography & Event Coverage.</p>
-                    <span class="card-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Web Dev Card -->
-            <a href="/expertise/web_developer/webDeveloper.html" class="expertise-card dev-card">
-                <div class="card-content">
-                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-                    <h2>Web Developer</h2>
-                    <p>Full-Stack Web Applications, React, Node.js, Serverless Systems & Custom Portals.</p>
-                    <span class="card-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-        </section>
-
-        <footer class="hub-footer">
-            <div class="footer-links">
-                <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA Services</a>
-                <a href="https://github.com/ferenczbalog" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://gurushots.com/balogferencz.artist" target="_blank"><i class="fa-solid fa-camera"></i> GuruShots</a>
-                <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i> Email Contact</a>
+        <!-- 01. DoP Card -->
+        <a href="/expertise/director_of_photography/dirOfPhotography.html" class="expertise-card dop">
+            <div class="glow-effect"></div>
+            <div class="card-top">
+                <span class="card-num">01</span>
+                <div class="icon-box"><i class="fa-solid fa-film"></i></div>
             </div>
-            <p class="copyright">© 2026 Balog Ferencz • All rights reserved.</p>
-        </footer>
+            <div class="card-bottom">
+                <h2>Director of Photography</h2>
+                <p>Cinematography, Narrative Shorts, Commercial Product Photography & Event Coverage.</p>
+                <div class="card-action">
+                    <span>Explore Work</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </a>
 
-    </main> 
+        <!-- 02. Sound Engineer Card -->
+        <a href="/expertise/sound_engineering/soundEngineering.html" class="expertise-card sound">
+            <div class="glow-effect"></div>
+            <div class="card-top">
+                <span class="card-num">02</span>
+                <div class="icon-box"><i class="fa-solid fa-headphones"></i></div>
+            </div>
+            <div class="card-bottom">
+                <h2>Sound Engineer</h2>
+                <p>Audio Post-Production, Foley, Dialogue Editing, Mixing & Sound Design for Film.</p>
+                <div class="card-action">
+                    <span>Explore Work</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </a>
+
+        <!-- 03. Web Dev Card -->
+        <a href="/expertise/web_developer/webDeveloper.html" class="expertise-card dev">
+            <div class="glow-effect"></div>
+            <div class="card-top">
+                <span class="card-num">03</span>
+                <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+            </div>
+            <div class="card-bottom">
+                <h2>Web Developer</h2>
+                <p>Full-Stack Web Applications, React, Node.js, Serverless Systems & Custom Portals.</p>
+                <div class="card-action">
+                    <span>Explore Work</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </a>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="landing-footer">
+        <div class="footer-links">
+            <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA</a>
+            <a href="https://github.com/ferenczbalog" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://gurushots.com/balogferencz.artist" target="_blank"><i class="fa-solid fa-camera"></i> GuruShots</a>
+            <a href="mailto:balogferencz.artist@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </div>
+        <p class="copyright">© 2026 Balog Ferencz • All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
