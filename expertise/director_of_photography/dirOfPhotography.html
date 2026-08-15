@@ -9,14 +9,11 @@
     <meta property="og:title" content="Balog Ferencz — DoP Portfolio">
     <meta property="og:image" content="/img/Logo-dirOfPhotography.png">
 
-<<<<<<< HEAD
-    <!-- Fonts & Icons -->
-=======
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -27,17 +24,12 @@
 <body>
 
     <!-- HAMBURGER GOMB MOBILHOZ -->
-<<<<<<< HEAD
     <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Toggle Navigation">
-=======
-    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Toggle Menu">
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
         <i class="fa-solid fa-bars"></i>
     </button>
 
     <div class="split-container">
 
-        <!-- SIDEBAR -->
         <aside class="sidebar">
             <div class="sidebar-inner">
                 <a href="/index.html">
@@ -61,7 +53,7 @@
                         <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://vimeo.com" target="_blank" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i></a>
                         <a href="https://gurushots.com/balogferencz.artist" target="_blank" aria-label="GuruShots" class="gurushots-link">
-                            <i class="fa-solid fa-camera-retro"></i>
+                            <img src="/expertise/director_of_photography/img/gurushots-logo.svg" alt="GuruShots" class="gurushots-icon">
                         </a>
                         <a href="mailto:balogferencz.artist@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                     </div>
@@ -73,11 +65,7 @@
         <!-- MAIN CONTENT -->
         <main class="main-content">
 
-<<<<<<< HEAD
             <!-- MOBIL LOGÓ & HEADER (768px ALATT) -->
-=======
-            <!-- MOBIL LOGÓ & HEADER -->
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
             <div class="mobile-top-header">
                 <img src="/img/Logo-dirOfPhotography.png" alt="Balog Ferencz" class="mobile-logo">
                 <p class="mobile-tagline">Cinematography & Visual Works</p>
@@ -251,11 +239,7 @@
                 </div>
             </section>
 
-<<<<<<< HEAD
             <!-- MOBIL LÁBLÉC (768px ALATT) -->
-=======
-            <!-- MOBIL LÁBLÉC -->
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
             <footer class="mobile-footer">
                 <div class="footer-links">
                     <a href="https://bif-pfa.netlify.app/" target="_blank"><i class="fa-solid fa-briefcase"></i> BIF PFA</a>
@@ -291,15 +275,9 @@
         <button class="modal-arrow next" onclick="changeImage(1)" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 
-<<<<<<< HEAD
     <!-- JAVASCRIPT: SIDEBAR TOGGLE, SLIDER & MODALS -->
     <script>
         // --- 0. MOBIL SIDEBAR TOGGLE ---
-=======
-    <!-- JAVASCRIPT: TOGGLE SIDEBAR, SLIDER & MODALS -->
-    <script>
-        // --- 0. MOBIL SIDEBAR TOGGLE (EZ HIÁNYZOTT!) ---
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             const btnIcon = document.querySelector('.mobile-menu-btn i');
@@ -330,7 +308,6 @@
 
         function updateSlider() {
             const track = document.getElementById('videoSliderTrack');
-            // Kiszámoljuk a 30px-es gap hézagot is az eltolásnál
             track.style.transform = `translateX(calc(-${currentSlide * 100}% - ${currentSlide * 30}px))`;
             
             dots.forEach((dot, index) => {
@@ -406,12 +383,9 @@
             const modal = document.getElementById('imageModal');
             updateModalImage();
             modal.classList.add('active');
-<<<<<<< HEAD
             document.body.style.overflow = 'hidden';
             
             document.addEventListener('keydown', handleKeyPress);
-=======
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
         }
 
         function updateModalImage() {
@@ -433,7 +407,6 @@
             if (event.target.id === 'imageModal' || event.target.className === 'close-btn') {
                 const modal = document.getElementById('imageModal');
                 modal.classList.remove('active');
-<<<<<<< HEAD
                 document.body.style.overflow = 'auto';
                 document.removeEventListener('keydown', handleKeyPress);
             }
@@ -447,8 +420,6 @@
                 modal.classList.remove('active');
                 document.body.style.overflow = 'auto';
                 document.removeEventListener('keydown', handleKeyPress);
-=======
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
             }
         }
     </script>

@@ -29,13 +29,9 @@ body {
     min-height: 100vh;
 }
 
-<<<<<<< HEAD
-/* SIDEBAR DESKTOP */
-=======
 /* ==========================================
    DESKTOP SIDEBAR
    ========================================== */
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
 .sidebar {
     width: 300px;
     height: 100vh;
@@ -170,15 +166,6 @@ body {
     margin-bottom: 6px;
 }
 
-<<<<<<< HEAD
-/* VIDEO SLIDER (CINEMATOGRAPHY SLIDESHOW FIX) */
-.video-slider-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
-    padding: 20px;
-=======
 .reel-desc {
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -190,29 +177,21 @@ body {
 .video-slider-container {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 30px;
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
+    border-radius: 10px;
+    background: #000000;
+    padding: 20px;
 }
 
 .video-slider-track {
     display: flex;
-<<<<<<< HEAD
-    gap: 30px; /* Megfelelő távolság a kártyák között */
+    gap: 30px;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     width: 100%;
-    transform: translateX(0px); /* Alaphelyzet fixálás */
-=======
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    width: 100%;
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
+    transform: translateX(0px);
 }
 
 .video-item.slide {
     min-width: 100%;
-<<<<<<< HEAD
     width: 100%;
     background: #121212;
     padding: 24px;
@@ -220,55 +199,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-sizing: border-box;
     flex-shrink: 0;
-}
-
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.slider-arrow:hover {
-    background: #ffffff;
-    color: #000000;
-}
-
-.slider-arrow.prev { left: 10px; }
-.slider-arrow.next { right: 10px; }
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.slider-dots .dot {
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.slider-dots .dot.active {
-    background: #ffffff;
-=======
-    box-sizing: border-box;
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
 }
 
 .video-header {
@@ -295,19 +225,10 @@ body {
     padding: 4px 10px;
     border-radius: 20px;
     font-family: 'Space Mono', monospace;
-    white-space: nowrap; /* CSOMAGOLÁS ÉS TÖRÉS ELLENI FIX */
+    white-space: nowrap;
     display: inline-block;
 }
 
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    height: 380px;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    background: #000;
-}
 
 .preview-thumb {
     width: 100%;
@@ -368,47 +289,45 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    background: rgba(15, 16, 21, 0.85);
-    border: 1px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .slider-arrow:hover {
-    border-color: var(--accent-gold);
-    background: var(--accent-gold);
+    background: #ffffff;
+    color: #000000;
 }
 
-.slider-arrow.prev { left: 15px; }
-.slider-arrow.next { right: 15px; }
+.slider-arrow.prev { left: 10px; }
+.slider-arrow.next { right: 10px; }
 
 .slider-dots {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .slider-dots .dot {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    background: var(--border-color);
     cursor: pointer;
-    transition: background 0.3s ease, width 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .slider-dots .dot.active {
-    background: var(--accent-gold);
-    width: 20px;
-    border-radius: 10px;
+    background: #ffffff;
 }
 
 /* ==========================================
@@ -596,7 +515,6 @@ body {
 .modal-arrow.prev { left: 25px; }
 .modal-arrow.next { right: 25px; }
 
-<<<<<<< HEAD
 /* GURUSHOTS IKON */
 .socials a.gurushots-link {
     display: inline-flex;
@@ -625,10 +543,11 @@ body {
     display: none;
 }
 
-/* MOBIL RESPONSIVE (768px ALATT) */
+/* ==========================================
+   MOBIL RESPONSIVE (768px ALATT)
+   ========================================== */
 @media (max-width: 768px) {
 
-    /* HAMBURGER GOMB FIX */
     .mobile-menu-btn {
         display: flex;
         position: fixed;
@@ -648,7 +567,7 @@ body {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
     }
 
-    /* MODAL SIDEBAR (80% SZÉLES, 100VH MAGAS) */
+    /* MODAL SIDEBAR (80% WIDTH, 100VH HEIGHT) */
     .sidebar {
         position: fixed;
         top: 0;
@@ -670,61 +589,6 @@ body {
         transform: translateX(0);
     }
 
-=======
-/* HIDE MOBILE ELEMENTS ON DESKTOP */
-.mobile-top-header,
-.mobile-footer,
-.mobile-menu-btn {
-    display: none;
-}
-
-/* ==========================================
-   MOBIL RESPONSIVE (768px ALATT)
-   ========================================== */
-@media (max-width: 768px) {
-
-    .mobile-menu-btn {
-        display: flex;
-        position: fixed;
-        top: 18px;
-        right: 18px;
-        z-index: 3000;
-        background: #121318;
-        color: #ffffff;
-        border: 1px solid #232530;
-        width: 46px;
-        height: 46px;
-        border-radius: 10px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    }
-
-    /* MODAL SIDEBAR (80% WIDTH, 100VH HEIGHT) */
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 80vw;
-        height: 100vh;
-        background-color: rgba(10, 10, 12, 0.96);
-        backdrop-filter: blur(10px);
-        border-right: 1px solid #232530;
-        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.8);
-        z-index: 2000;
-        transform: translateX(-100%);
-        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        overflow-y: auto;
-        padding: 40px 20px;
-    }
-
-    .sidebar.active {
-        transform: translateX(0);
-    }
-
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
     .split-container {
         flex-direction: column;
     }
@@ -733,66 +597,6 @@ body {
         margin-left: 0 !important;
         padding: 20px 18px !important;
         width: 100%;
-<<<<<<< HEAD
-    }
-
-    .mobile-top-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 0 30px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .mobile-top-header .mobile-logo {
-        max-height: 48px;
-        width: auto;
-        margin-bottom: 8px;
-        filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.08));
-    }
-
-    .mobile-top-header .mobile-tagline {
-        font-family: 'Space Mono', monospace;
-        font-size: 0.7rem;
-        color: #666666;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .mobile-footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        padding: 40px 0 20px 0;
-        margin-top: 40px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        width: 100%;
-    }
-
-    .mobile-footer .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
-    }
-
-    .mobile-footer .footer-links a {
-        color: #888888;
-        text-decoration: none;
-        font-size: 0.8rem;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .mobile-footer .copyright {
-        color: #444444;
-        font-size: 0.72rem;
-=======
->>>>>>> 2bf0bcc2ab853eaf8af90a06e55b1e0ffa607074
     }
 
     .mobile-top-header {
@@ -868,4 +672,72 @@ body {
 
     .modal-arrow.prev { left: 8px; }
     .modal-arrow.next { right: 8px; }
+}
+
+/* FIX: Videó képarány és tartó konténer */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto; /* Fix height eltávolítva */
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; /* Kitölti a keretet arányos vágással, torzulás nélkül */
+    background: #000000;
+}
+
+/* SLIDER TRACK CONTAINER FIX */
+.video-slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000000;
+    padding: 20px;
+}
+
+.video-slider-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+}
+
+.video-item.slide {
+    min-width: 100%;
+    width: 100%;
+    background: #121212;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* GURUSHOTS IKON STÍLUS A SIDEBAR-BAN */
+.socials a.gurushots-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials .gurushots-icon {
+    width: 1.1em;
+    height: 1.1em;
+    object-fit: contain;
+    filter: opacity(0.6) grayscale(100%);
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.socials a.gurushots-link:hover .gurushots-icon {
+    filter: opacity(1) brightness(2) grayscale(0%);
+    transform: scale(1.1);
 }
