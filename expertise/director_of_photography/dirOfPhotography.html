@@ -376,9 +376,23 @@
         let currentCategory = 'corporate';
         let currentImgIndex = 0;
 
+// A kategória összes képének előtöltése a memóriába
+function preloadCategoryImages(category) {
+    const list = photoGalleries[category];
+    if (!list) return;
+    
+    list.forEach(item => {
+        const img = new Image();
+        img.src = item.src; // A böngésző a háttérben letölti és cache-eli
+    });
+}
+
         function openImageModal(index, category) {
             currentCategory = category;
             currentImgIndex = index;
+            
+            // AZONNALI ELŐTÖLTÉS: Letölti a kategória többi képét a háttérben
+            preloadCategoryImages(category);
             
             const modal = document.getElementById('imageModal');
             updateModalImage();
