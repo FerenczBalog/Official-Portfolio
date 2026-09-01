@@ -191,6 +191,37 @@ body {
     transform: translateX(5px);
 }
 
+/* Primary Card Customization */
+.expertise-card.primary-expertise {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    position: relative;
+}
+
+/* Badge Style */
+.badge-primary {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-primary i {
+    color: #f39c12; /* Finom arany/sárga csillag ikon */
+    font-size: 0.7rem;
+}
+
 /* FOOTER STYLING */
 .landing-footer {
     display: flex;
